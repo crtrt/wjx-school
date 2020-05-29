@@ -18,8 +18,8 @@
             </el-tabs>
 
             <div style="display: flex; margin-top: 20px; margin-bottom: 50px; flex-direction: row-reverse">
-                <el-button size="mini" type="primary" style="margin-left: 20px" @click="submit(0)">发布征集</el-button>
-                <el-button size="mini" type="primary" @click="submit(1)">暂存征集</el-button>
+                <el-button size="mini" type="primary" style="margin-left: 20px" @click="submit(0)">发布问卷</el-button>
+                <el-button size="mini" type="primary" @click="submit(1)">暂存问卷</el-button>
             </div>
 
         </div>
@@ -45,13 +45,13 @@
             return{
                 pageIndex: "3",
                 position: {
-                    name: '信息征集 >> 新增征集',
+                    name: '问卷 >> 新增问卷',
                     haveBack: true,
 
                 },
                 notifyType: 3,
 
-                subTabs: ['征集信息'],
+                subTabs: ['问卷信息'],
                 subTabIndex: 0,
                 loading:false,
 

@@ -29,7 +29,7 @@
                 pageIndex: "3",
                 roleType: Cookies.get('type'),
                 position: {
-                    name: '信息征集',
+                    name: '问卷征集',
                     haveBack: true,
 
                 },

@@ -60,7 +60,7 @@
             return {
                 messageId:-1,
                 position: {
-                    name: '信息征集 >> ',
+                    name: '问卷 >> ',
                     haveBack: true,
                 },
                 notifyType: 3,
@@ -68,7 +68,7 @@
 
                 readListType: true,
 
-                subTabs: ['征集信息', '征集结果'],
+                subTabs: ['问卷信息', '问卷征集结果'],
                 subTabIndex: 0,
                 token: Cookies.get('token'),
             }

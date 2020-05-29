@@ -25,8 +25,8 @@
             </el-card>
 
             <div v-if="!readMessage" style="display: flex; margin-top: 20px; flex-direction: row-reverse; margin-bottom: 30px">
-                <el-button size="mini" type="primary" style="margin-left: 20px" @click="submit(0)">提交征集</el-button>
-                <el-button size="mini" type="primary" @click="submit(1)">暂存征集</el-button>
+                <el-button size="mini" type="primary" style="margin-left: 20px" @click="submit(0)">提交问卷</el-button>
+                <el-button size="mini" type="primary" @click="submit(1)">暂存问卷</el-button>
             </div>
 
 
@@ -56,11 +56,11 @@
                 readMessage: false,
                 notifyId: -1,
 
-                subTabs: ['征集填写'],
+                subTabs: ['问卷填写'],
                 subTabIndex: 0,
 
                 position: {
-                    name: '信息征集 >> ',
+                    name: '问卷 >> ',
                     haveBack: true,
                 },
                 notifyType: 3,
