@@ -23,7 +23,7 @@
             </div>
 
         </div>
-        <cli-footer style="position: absolute; bottom: 0;"></cli-footer>
+
     </div>
 </template>
 
@@ -35,12 +35,12 @@
     import Message_detail from "../../components/message/message_detail";
     import Notify_edit from "../../components/notify/notify_edit";
     import Cli_sub_title from "../../components/base/cli_sub_title";
-    import CliFooter from "../../components/base/cliFooter";
     import Cookies from 'js-cookie'
     import API from '../../api'
     export default {
         name: "add",
-        components: {Cli_sub_title, Notify_edit, Message_detail, DataEdit, Position, CliMenu, CliTitle,CliFooter},
+        components: {Cli_sub_title, Notify_edit, Message_detail, DataEdit, Position, CliMenu, CliTitle},
+
         data(){
             return{
                 pageIndex: "3",

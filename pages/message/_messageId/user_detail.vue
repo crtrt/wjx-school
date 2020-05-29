@@ -44,10 +44,9 @@
     import Notify_edit_disable from "../../../components/notify/notify_edit_disable";
     import Cookies from 'js-cookie'
     import API from '../../../api'
-    import CliFooter from "../../../components/base/cliFooter";
     export default {
         name: "user_detail",
-        components: {CliFooter, Notify_edit_disable, Message_detail, Cli_sub_title, Position, CliMenu, CliTitle,},
+        components: {Notify_edit_disable, Message_detail, Cli_sub_title, Position, CliMenu, CliTitle,},
         data(){
             return{
                 messageId:-1,

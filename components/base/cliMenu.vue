@@ -7,6 +7,7 @@
         @open="handleOpen"
         @close="handleClose"
         background-color="rgb(222, 242, 253)"
+
         text-color="rgb(64, 84, 119)"
         active-text-color="rgb(68, 117, 223)"
       >
@@ -18,25 +19,25 @@
           <div v-bind:class="{ 'menuclick': (pageIndex === '2') }"  style="font-family: '黑体'; width:100%;font-size: 16px"  ><i class="el-icon-bell"></i>通知公告</div>
         </el-menu-item>
         <el-menu-item class="menuItem" index="3"  @click=toCliNoticePage style="padding: 0; ">
-          <div v-bind:class="{ 'menuclick': (pageIndex === '3') }"  style="font-family: '黑体'; width:100%;font-size: 16px"  ><i class="el-icon-edit"></i>信息征集</div>
+          <div v-bind:class="{ 'menuclick': (pageIndex === '3') }"  style="font-family: '黑体'; width:100%;font-size: 16px"  ><i class="el-icon-edit"></i>问卷</div>
         </el-menu-item>
 
-        <el-menu-item class="menuItem" index="4" @click="toPaperPageHome" style="padding: 0;">
-          <div v-bind:class="{ 'menuclick' : (pageIndex === '4') }" style="font-family: '黑体'; width: 100%; font-size: 16px;">
-            <i class="el-icon-printer"></i>论文认领</div>
-        </el-menu-item>
-      <el-menu-item class="menuItem"   index="11" style="padding: 0; " @click="toDatalistPage">
-          <div v-bind:class="{ 'menuclick': (pageIndex === '11') }"  style="font-family: '黑体'; width:100%;font-size: 16px"  ><i class="el-icon-edit-outline"></i>数据清单</div>
-        </el-menu-item>
+<!--        <el-menu-item class="menuItem" index="4" @click="toPaperPageHome" style="padding: 0;">-->
+<!--          <div v-bind:class="{ 'menuclick' : (pageIndex === '4') }" style="font-family: '黑体'; width: 100%; font-size: 16px;">-->
+<!--            <i class="el-icon-printer"></i>论文认领</div>-->
+<!--        </el-menu-item>-->
+<!--      <el-menu-item class="menuItem"   index="11" style="padding: 0; " @click="toDatalistPage">-->
+<!--          <div v-bind:class="{ 'menuclick': (pageIndex === '11') }"  style="font-family: '黑体'; width:100%;font-size: 16px"  ><i class="el-icon-edit-outline"></i>数据清单</div>-->
+<!--        </el-menu-item>-->
         <el-menu-item v-if="type === '0'" class="menuItem"   index="5" style="padding: 0; " @click="toProcessManagementPage">
           <div v-bind:class="{ 'menuclick': (pageIndex === '5') }"  style="font-family: '黑体'; width:100%;font-size: 16px"  ><i class="el-icon-view"></i>用户管理</div>
         </el-menu-item>
 
-        <el-menu-item v-if="type === '1'" class="menuItem" index="6" @click="toPaperPage" style="padding: 0;">
-        <div v-bind:class="{ 'menuclick' : (pageIndex === '6') }" style="font-family: '黑体'; width: 100%; font-size: 16px;">
-          <i class="el-icon-document"></i>我的论文
-        </div>
-        </el-menu-item>
+<!--        <el-menu-item v-if="type === '1'" class="menuItem" index="6" @click="toPaperPage" style="padding: 0;">-->
+<!--        <div v-bind:class="{ 'menuclick' : (pageIndex === '6') }" style="font-family: '黑体'; width: 100%; font-size: 16px;">-->
+<!--          <i class="el-icon-document"></i>我的论文-->
+<!--        </div>-->
+<!--        </el-menu-item>-->
 
         <el-menu-item class="menuItem"   index="7" style="padding: 0; " @click="toSettingPage">
           <div v-bind:class="{ 'menuclick': (pageIndex === '7') }"  style="font-family: '黑体'; width:100%;font-size: 16px"  ><i class="el-icon-setting"></i>个人设置</div>

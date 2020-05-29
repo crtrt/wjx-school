@@ -19,11 +19,11 @@
     import Position from "../../components/base/position";
     import DataEdit from "../../components/message/message_edit";
     import Message_detail from "../../components/message/message_detail";
-    import CliFooter from "../../components/base/cliFooter";
-    import PaperEdit from "../../components/paper/paper_edit";
+    // import PaperEdit from "../../components/paper/paper_edit";
     export default {
         name: "add",
-        components: {PaperEdit, Message_detail, DataEdit, Position, CliMenu, CliTitle,List,CliFooter},
+        // components: {PaperEdit, Message_detail, DataEdit, Position, CliMenu, CliTitle,List},
+        components: {Message_detail, DataEdit, Position, CliMenu, CliTitle,List},
         data(){
             return{
                 pageIndex: "3",

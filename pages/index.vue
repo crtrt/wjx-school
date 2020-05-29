@@ -50,11 +50,10 @@ import Cookies from 'js-cookie';
 import Pro from '../api/API_PRO'
 import API from '../api'
 import { getBrowser } from "../components/util";
-import CliFooter from "../components/base/cliFooter";
 
 export default {
   components: {
-    CliFooter,
+
     login,upload
   },
 

@@ -76,7 +76,7 @@
         },
         data() {
             return {
-                titleList: ['未读通知', '待交征集', '项目管理']
+                titleList: ['未读通知', '待填问卷']
             }
         },
         methods: {

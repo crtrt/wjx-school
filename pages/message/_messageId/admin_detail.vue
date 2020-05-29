@@ -49,13 +49,12 @@
     import API from '../../../api'
     import Un_read_list from "../../../components/message/unread_list";
     import Read_list from "../../../components/message/read_list";
-    import CliFooter from "../../../components/base/cliFooter";
     export default {
         name: "admin_detail",
         components: {
             Un_read_list,
             Read_list,
-            Notify_edit_disable, DataEdit, Notify_edit, Cli_sub_title, Position, CliMenu, CliTitle,CliFooter},
+            Notify_edit_disable, DataEdit, Notify_edit, Cli_sub_title, Position, CliMenu, CliTitle},
         data(){
             return {
                 messageId:-1,
