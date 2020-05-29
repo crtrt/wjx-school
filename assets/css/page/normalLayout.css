@@ -1,0 +1,37 @@
+html,body{margin:0;padding:0;height:100%}
+
+.outDiv {
+    min-width: 1000px;
+    overflow: hidden;
+    height: 100%;
+}
+
+.titleClass {
+    position: fixed;
+    min-width: 1000px;
+}
+
+.menuClass {
+    position: fixed;
+    top: 70px;
+    width: 150px;
+    z-index: 1;
+}
+
+.bodyDiv {
+    position: fixed;
+    top: 70px;
+    left: 150px;
+    width: calc(100% - 150px);
+    min-height: calc(100% - 70px);
+    padding: 1.5rem 1.5rem 10rem;
+    margin-bottom: 5rem;
+    background-color: #f4f7fc;
+    height: 80%;
+    overflow-y: auto;
+}
+
+.footerStyle{
+    position: absolute;
+    bottom: 0;
+}
