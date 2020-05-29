@@ -13,8 +13,8 @@
             </el-card>
 
             <div v-if="!readMessage" style="display: flex; margin-top: 20px; flex-direction: row-reverse">
-                <el-button size="mini" type="primary" style="margin-left: 20px">提交征集</el-button>
-                <el-button size="mini" type="primary">暂存征集</el-button>
+                <el-button size="mini" type="primary" style="margin-left: 20px">提交问卷</el-button>
+                <el-button size="mini" type="primary">暂存问卷</el-button>
             </div>
 
 
@@ -43,11 +43,11 @@
                 readMessage: true,
                 notifyId: -1,
 
-                subTabs: ['征集详情'],
+                subTabs: ['问卷详情'],
                 subTabIndex: 0,
 
                 position: {
-                    name: '信息征集 >> xxx征集 >> xxx',
+                    name: '问卷 >> xxx问卷 >> xxx',
                     haveBack: true,
                 },
             }
