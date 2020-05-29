@@ -5,8 +5,8 @@
             <div class="more" @click="moreInfo(showType)">更多</div>
         </div>
 
-        <el-card :body-style="{ padding: '0px' }" style="min-height: 250px;">
-            <div  style="display: table; width: 100%; padding-left: 10px; padding-top: 20px; padding-bottom:15px; padding-right: 10px">
+        <el-card :body-style="{ padding: '0px' }" style="min-height: 250px;margin-top: 20px;margin-bottom: 30px">
+            <div  style="display: table; width: 100%; padding-left: 15px; padding-top: 20px; padding-bottom:15px; padding-right: 15px">
                 <div style="display: table-row">
                     <div class="tableTitle" style="width: 40px">
                         序号

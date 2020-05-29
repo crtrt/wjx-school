@@ -22,6 +22,7 @@
           <div v-bind:class="{ 'menuclick': (pageIndex === '3') }"  style="font-family: '黑体'; width:100%;font-size: 16px"  ><i class="el-icon-edit"></i>问卷</div>
         </el-menu-item>
 
+
 <!--        <el-menu-item class="menuItem" index="4" @click="toPaperPageHome" style="padding: 0;">-->
 <!--          <div v-bind:class="{ 'menuclick' : (pageIndex === '4') }" style="font-family: '黑体'; width: 100%; font-size: 16px;">-->
 <!--            <i class="el-icon-printer"></i>论文认领</div>-->

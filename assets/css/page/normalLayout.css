@@ -27,6 +27,7 @@ html,body{margin:0;padding:0;height:100%}
     padding: 1.5rem 1.5rem 10rem;
     margin-bottom: 5rem;
     background-color: #f4f7fc;
+    /*background-color: #ffffff;*/
     height: 80%;
     overflow-y: auto;
 }
