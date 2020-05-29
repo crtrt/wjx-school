@@ -7,17 +7,28 @@
     <el-tabs  class="bd" type="border-card">
       <el-tab-pane label="用户登录">
         <p class="title">
-          校园问卷管理系统
-          <span style="display: inline-block; padding-left: 100%"></span>
+          欢迎使用校园问卷星!
         </p>
+        <el-form :model="loginForm" :rules="loginRule" ref="loginForm" :label-position="labelPosition">
 
-        <el-button style="margin-top: 4rem" type="primary" @click="userLogin()" class="submitBtn" round v-loading.fullscreen.lock="loadingLogin">mis认证</el-button>
+
+          <el-form-item  prop="userName" class="login-item" style="margin: 0">
+            <el-input type="userName" v-model="loginForm.userName" placeholder="账号" @keyup.enter.native="submitForm('loginForm')"></el-input>
+          </el-form-item>
+          <el-form-item prop="pwd" style="margin-top: 20px;margin-bottom: 0px">
+            <el-input v-model="loginForm.pwd" placeholder="密码" type="password" @keyup.enter.native="submitForm('loginForm')"></el-input>
+          </el-form-item>
+          <el-form-item style="margin-top: 20px">
+            <el-button type="primary" @click="userLogin()" class="submitBtn" round >登录</el-button>
+          </el-form-item>
+        </el-form>
+
+<!--        <el-button style="margin-top: 4rem" type="primary" @click="userLogin()" class="submitBtn" round v-loading.fullscreen.lock="loadingLogin">登陆</el-button>-->
 
       </el-tab-pane>
       <el-tab-pane label="管理员登录">
         <p class="title">
-          校园问卷管理系统
-          <span style="display: inline-block; padding-left: 100%"></span>
+          欢迎使用校园问卷星!
         </p>
         <el-form :model="loginForm" :rules="loginRule" ref="loginForm" :label-position="labelPosition">
 
@@ -38,7 +49,6 @@
     <div style="position: absolute; height: 2rem; bottom: 2rem">
 
     </div>
-    <cli-footer style="position: absolute; bottom: 0;"></cli-footer>
   </div>
 </template>
 
@@ -225,7 +235,7 @@ export default {
   }
   .title{
     width: 100%;
-    text-align: justify;
+    text-align: center;
     height: 2.5rem;
   }
   .title:after{
