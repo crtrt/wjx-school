@@ -82,8 +82,8 @@
             <div style="display: flex; flex-direction: row-reverse">
                 <el-button v-if="showType" class="bottomButton" size="mini" type="primary" @click="downloadBatch">批量下载</el-button>
                 <el-button v-if="showType" class="bottomButton" size="mini" type="primary" @click="downloadMessage">信息导出</el-button>
-                <el-button v-if="!showType" class="bottomButton" size="mini" type="primary" @click="sendEmail">邮件提醒</el-button>
-                <el-button v-if="!showType" class="bottomButton" size="mini" type="primary" @click="sendMessage">短信提醒</el-button>
+<!--                <el-button v-if="!showType" class="bottomButton" size="mini" type="primary" @click="sendEmail">邮件提醒</el-button>-->
+<!--                <el-button v-if="!showType" class="bottomButton" size="mini" type="primary" @click="sendMessage">短信提醒</el-button>-->
                 <notify_btn v-if="!showType" :is_message="1" :create_time="create_time" :name="name" class="bottomButton">生成消息提醒</notify_btn>
                 <el-button v-if="showType" class="bottomButton" size="mini" type="primary" @click="getcheckAnswer(-1)">不通过</el-button>
                 <el-button v-if="showType" class="bottomButton" size="mini" type="primary" @click="getcheckAnswer(1)">通过</el-button>

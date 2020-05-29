@@ -81,7 +81,6 @@
 
             /**
              * 1：电脑端
-             * 2：手机端
              * */
             showType:{
                 type: Number,

@@ -15,7 +15,7 @@
         </div>
 
         <div class="titleClass" style="margin-top: 5px">
-            征集字段  <el-checkbox @change="selectAll">全选</el-checkbox>
+            问卷字段  <el-checkbox @change="selectAll">全选</el-checkbox>
         </div>
 
         <div style="margin-top: 10px;">
