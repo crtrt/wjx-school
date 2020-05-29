@@ -19,7 +19,7 @@
             <el-input v-model="loginForm.pwd" placeholder="密码" type="password" @keyup.enter.native="submitForm('loginForm')"></el-input>
           </el-form-item>
           <el-form-item style="margin-top: 20px">
-            <el-button type="primary" @click="userLogin()" class="submitBtn" round >登录</el-button>
+            <el-button type="primary" @click="submitForm('loginForm')" class="submitBtn" round >登录</el-button>
           </el-form-item>
         </el-form>
 
