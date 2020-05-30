@@ -66,12 +66,7 @@
                     haveBack: true,
 
                 },
-                // position3: {
-                //     name1: '项目管理',
-                //     name2: '更多',
-                //     haveBack: true,
-                //
-                // },
+
 
                 viewType: false,
                 showType:2,
