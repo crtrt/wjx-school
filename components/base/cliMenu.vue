@@ -1,5 +1,5 @@
 <template>
-  <div id="scrollHid" style="align-items: center; background-color:rgb(244, 249, 255);padding-right: 0;height:1200px;max-height: 1500px;overflow-y:scroll;">
+  <div id="scrollHid" style="align-items: center; background-color:rgb(244, 249, 255);padding-right: 0;height:1200px;max-height: 1500px">
 
       <el-menu
         :default-active="activeIndex"
@@ -8,7 +8,7 @@
         @close="handleClose"
         background-color="rgb(222, 242, 253)"
         text-color="rgb(64, 84, 119)"
-        active-text-color="rgb(68, 117, 223)"
+        active-text-color="rgb(28,176,246)"
       >
         <el-menu-item class="menuItem" index="1"  @click=toCLiHomePage  style="padding: 0"  >
 
