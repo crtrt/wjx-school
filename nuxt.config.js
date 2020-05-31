@@ -11,8 +11,9 @@ module.exports = {
       { hid: 'description', name: 'description', content: 'Nuxt.js project' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/weblogo.png' }
+      { rel: 'icon', type: 'image/x-icon', href: 'weblogo.png' }
     ]
+
   },
   /*
   ** Customize the progress bar color
