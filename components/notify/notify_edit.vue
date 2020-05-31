@@ -74,7 +74,7 @@
                             <div class="tableTitle">
                                 <div class="dialog-table-self-cell">{{item.name}}</div>
                                 <div class="dialog-table-self-cell" style="">{{item.job_number}}</div>
-                                <div class="dialog-table-self-cell" style="width: 180px;">{{item.unitInfo.name}}</div>
+<!--                                <div class="dialog-table-self-cell" style="width: 180px;">{{item.unitInfo.name}}</div>-->
                             </div>
                         </div>
                     </div>
@@ -108,7 +108,7 @@
                         <div class="tableTitle">
                             <div class="dialog-table-self-cell">{{item.name}}</div>
                             <div class="dialog-table-self-cell" style="">{{item.job_number}}</div>
-                            <div class="dialog-table-self-cell" style="width: 180px;">{{item.unitInfo.name}}</div>
+<!--                            <div class="dialog-table-self-cell" style="width: 180px;">{{item.unitInfo.name}}</div>-->
                         </div>
                     </div>
                 </div>
