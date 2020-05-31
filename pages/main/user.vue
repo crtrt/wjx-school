@@ -18,12 +18,6 @@
                         <td class="tableTitle" style=" text-align: center">
                             发布时间
                         </td>
-<!--                        <td class="tableTitle" v-if="showType===2">-->
-<!--                        </td>-->
-<!--                        <td class="tableTitle" v-if="showType===2">-->
-<!--                        </td>-->
-<!--                        <td class="tableTitle" v-if="showType===2">-->
-<!--                        </td>-->
                         <td class="tableTitle">
                         </td>
                     </tr>

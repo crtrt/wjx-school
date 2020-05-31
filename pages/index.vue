@@ -92,17 +92,11 @@ export default {
       // 先登录
       this.misLogin();
 
-      // 如果登录不了，如果是手机，则跳转到手机登录页
-      const isPhone = getBrowser() === 'phone';
-      if (isPhone){
-          this.$router.push({path: `/phone/`})
-      }
+
 
   },
   beforeUpdate() {
-    if (getBrowser() === 'phone'){
-      this.$router.push({path: `/phone/`})
-    }
+
   },
 
   methods: {

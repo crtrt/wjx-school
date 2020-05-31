@@ -35,7 +35,7 @@
                  */
                 showType:2,
                 position: {
-                    name: '通知公告',
+                    name: '通知公告栏',
                     haveBack: false,
 
                 },

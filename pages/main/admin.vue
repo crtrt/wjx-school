@@ -75,7 +75,6 @@
         },
 
         methods:{
-            // 点击返回按钮
 
             click1(){
                 this.$router.push({path: `/notify`})
@@ -83,9 +82,6 @@
             click2(){
                 this.$router.push({path: `/message`})
             }
-            // click3(){
-            //     this.$router.push({path: `/project`})
-            // }
         }
 
     }

@@ -46,14 +46,7 @@
                                     </div>
                                 </template>
                             </el-autocomplete>
-<!--                            <el-input-->
-<!--                                    prefix-icon="el-icon-search"-->
-<!--                                    size="mini"-->
-<!--                                    placeholder="请输入姓名或者工号进行搜索"-->
-<!--                                    v-model="searchInput"-->
-<!--                                    @change="changeFunc"-->
-<!--                                    style="width: 30%;margin: 5px 0 5px 20px;">-->
-<!--                            </el-input>-->
+
                         </div>
                         <div  style="display: table; width: 100%; padding: 0 10px 20px 20px;">
                             <div style="display: table-row">
@@ -270,12 +263,12 @@
                 searchInput: '', // 搜索输入框
                 positionSelected: [],    // 已选择的职务
                 /**
-                 * 1 党委副书记
+                 * 1
                  * 2
-                 * 3 普通辅导员
+                 * 3
                  * 4 无
                  */
-                positionList: [{id: 1, name:　'党委副书记'}, {id: 3,name: '普通辅导员'}, {id: 4,name: '无'}], // 职务列表
+                positionList:[],
                 unitSelected: [],   // 已选择的单位
                 /**
                  * 1 电信学院
@@ -284,9 +277,9 @@
                  * 4 北交大
                  * 5 国重
                  */
-                unitList: [{id: 1, name: '电信学院'}, {id: 2, name: '软件学院'},{id: 4, name: '北交大'},{id: 5,name: '国重'}],   // 单位列表
+                unitList: [],   // 单位列表
                 jobSelected: [], // 已选择的职称
-                jobList: [{name: '学生'},{name: '讲师'},{name: '教授'},{name: '副教授'},{name: '无'}],    // 职称列表
+                jobList: [],    // 职称列表
                 dataList:[],
                 dataList2:[],
                 position: {
@@ -294,9 +287,7 @@
                     haveBack: true,
 
                 },
-                tableData3:[{index:1,id:"233",name:"蔡徐坤"},
-                    {index:2,id:"2333",name:"篮球"}
-                ],
+                tableData3:[],
                 listForm:{
                     page:1,
                     size:20,

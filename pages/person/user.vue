@@ -127,7 +127,7 @@
         data(){
             return {
                 position: {
-                    name: '个人设置',
+                    name: '个人设置区',
                     haveBack: true,
                 },
 
