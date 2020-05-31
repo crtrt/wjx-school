@@ -1,10 +1,9 @@
 <template >
     <div id="out_div" style="display: table; box-shadow: 0 0 5px rgba(158,158,158,0.7); text-align: center">
-<!--      <img src="../../assets/image/s1.png" height="80%" style="position: absolute; top: 7px; left: 9px"/>-->
+      <img src="../../assets/image/s1.png" height="80%" style="position: absolute; top: 7px; left: 9px"/>
       <p style=" font-weight: bold; font-family:'FZYaSongS-B-GB'; font-size: 28px; color: rgb(37, 144, 226);">校园问卷管理系统</p>
     </div>
 </template>
-
 
 <script>
   import API from '../../api'
