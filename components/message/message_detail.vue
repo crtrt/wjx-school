@@ -1,7 +1,7 @@
 <template>
     <div style="padding-left: 20px; padding-right: 20px; padding-bottom: 20px;">
         <div v-if="showType === 1" style="width: 100%; text-align: center" >
-            <strong style="font-size: 1.2rem">待填字段</strong>
+            <strong style="font-size: 1.2rem">待填问题</strong>
         </div>
 
         <template v-for="(item, index) in dataList">

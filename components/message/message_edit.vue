@@ -43,17 +43,17 @@
         </div>
 
         <el-dialog
-            title="添加字段"
+            title="添加问题"
             v-if="dialogVisible && !isView"
             :visible.sync="dialogVisible"
             width="600px"
             :modal="dialogModal">
             <div class="dialogMsgClass">
-                <p>字段名称:</p>
+                <p>问题名称:</p>
                 <el-input v-model="dialogMsg.content" placeholder="字段名称" style="max-width: 80%"></el-input>
             </div>
             <div class="dialogMsgClass">
-                <p>字段类型:</p>
+                <p>问题类型:</p>
                 <el-radio-group v-model="dialogMsg.type">
                     <el-radio :label="1">填空型</el-radio>
                     <el-radio :label="2">单选型</el-radio>
@@ -61,7 +61,7 @@
                 </el-radio-group>
             </div>
             <div class="dialogMsgClass" v-show="dialogMsg.type === 2 || dialogMsg.type === 3" >
-                <p>字段类型:</p>
+                <p>问题类型:</p>
                 <el-button v-show="dialogMsg.type === 2 || dialogMsg.type === 3" size="mini"
                            @click="dialogMsg.options.push({order: dialogMsg.options.length, content: ''})">添加选项</el-button>
                 <el-button v-show="dialogMsg.type === 2 || dialogMsg.type === 3" type="danger" size="mini" @click="dialogMsg.options.pop('')">删除选项</el-button>

@@ -12,7 +12,7 @@
                 <el-tab-pane label="基本信息">
                     <notify_edit :edittype="notifyType" ref="notifyCom"></notify_edit>
                 </el-tab-pane>
-                <el-tab-pane label="字段编辑">
+                <el-tab-pane label="问题编辑">
                     <data-edit ref="zhengjiCom"></data-edit>
                 </el-tab-pane>
             </el-tabs>

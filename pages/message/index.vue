@@ -7,7 +7,6 @@
             <position :positionName="position.name"></position>
             <list :pageIndex="pageIndex" :roleType="roleType"></list>
         </div>
-        <cli-footer style="position: absolute; bottom: 0;"></cli-footer>
     </div>
 </template>
 

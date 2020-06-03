@@ -12,7 +12,7 @@
                     完成度
                 </div>
                 <div class="tableTitle" style="text-align: center">
-                    开展周期
+                    问卷填写周期
                 </div>
                 <div class="tableTitle" style="text-align: center" >
                     发布时间
@@ -68,7 +68,7 @@
                     style="">
             </el-pagination>
             <div style="padding-right: 15px" v-if="type === '0'">
-                <el-button type="primary" size="mini" @click="toNewMessage">新增征集</el-button>
+                <el-button type="primary" size="mini" @click="toNewMessage">新增问卷</el-button>
             </div>
         </div>
 
