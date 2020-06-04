@@ -196,9 +196,9 @@
                 let data ={
                     token: this.token,
                     name: this.user_info.name,
-                    unit_id: this.user_info.unitInfo.id,
+                    unit_id: this.user_info.unit_id,
                     entry_time: this.user_info.entry_time,
-                    job: this.user_info.jobtitleInfo.id,
+                    job: this.user_info.job,
                     position_id: this.user_info.positionInfo.id,
                     phone: this.user_info.phone,
                     email: this.user_info.email,
