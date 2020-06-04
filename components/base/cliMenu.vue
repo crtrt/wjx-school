@@ -22,15 +22,10 @@
         </el-menu-item>
 
 
-        <el-menu-item v-if="type === '0'" class="menuItem"   index="5" style="padding: 0; " @click="toProcessManagementPage">
+        <el-menu-item v-if="type === '0' && this.account_name === '管理员'" class="menuItem"   index="5" style="padding: 0; " @click="toProcessManagementPage">
           <div v-bind:class="{ 'menuclick': (pageIndex === '5') }"  style="font-family: '黑体'; width:100%;font-size: 16px"  ><i class="el-icon-view"></i>用户管理</div>
         </el-menu-item>
 
-        <el-menu-item v-if="type === '1'" class="menuItem" index="6" @click="toPaperPage" style="padding: 0;">
-        <div v-bind:class="{ 'menuclick' : (pageIndex === '6') }" style="font-family: '黑体'; width: 100%; font-size: 16px;">
-          <i class="el-icon-document"></i>我的论文
-        </div>
-        </el-menu-item>
 
         <el-menu-item class="menuItem"   index="7" style="padding: 0; " @click="toSettingPage">
           <div v-bind:class="{ 'menuclick': (pageIndex === '7') }"  style="font-family: '黑体'; width:100%;font-size: 16px"  ><i class="el-icon-setting"></i>个人设置</div>
@@ -64,6 +59,7 @@
 <script>
   import Cookies from 'js-cookie'
   import Pro from '../../api/API_PRO'
+  import API from "../../api"
     export default {
         name: "cliMenu",
       props:{
@@ -75,6 +71,7 @@
         return {
           activeIndex: "1",
           name:'',
+          account_name:'',
           isadmin: false,
           centerDialogVisible:false,
           isShowdefMan:false,
@@ -89,6 +86,9 @@
         }
       },
       mounted:function () {
+          this.getOriginalInfo()
+          // alert(this.account_name === 'admin')
+        // alert(this.account_name)
         this.activeIndex = this.pageIndex
 /*        this.name=JSON.parse(Cookies.get("info")).name
         if (Cookies.get('type') === '0') {
@@ -107,6 +107,26 @@
         }*/
       },
       methods: {
+        getOriginalInfo(){
+          let data ={
+            token: this.token,
+          }
+          API.Getinfo(data).then(res => {
+            if(res.code){
+              alert(res.message);
+              return;
+            }
+
+            this.account_name = res.user_info.name;
+            console.log(res);
+          }).catch(msg => {
+            if(res.code){
+              alert(res.message);
+              return;
+            }
+            alert(msg)
+          })
+        },
         handleOpen(key, keyPath) {
           console.log(key, keyPath);
         },
