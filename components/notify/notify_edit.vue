@@ -16,11 +16,11 @@
                 </div>
         </div>
 
-        <el-dialog title="发布范围" :visible.sync="dialogFormVisible" width="1000px" :modal="dialogModal">
+        <el-dialog title="发布范围" :visible.sync="dialogFormVisible" width="800px" :modal="dialogModal">
             <div>
                 <div style="width: 100%">
                     <el-radio-group v-model="rangeType" @change="selectChange" style="margin-left: 10px">
-<!--                        <el-radio :label="1" >单位</el-radio>-->
+                        <el-radio :label="1" >学院</el-radio>
 <!--                        <el-radio :label="2" >职称</el-radio>-->
                         <el-radio :label="3" >自定义</el-radio>
                     </el-radio-group>
@@ -166,40 +166,40 @@
                 </div>
             </el-row>
         </div>
-        <div class="fujian display-row" style="margin-top: 80px;">
-            <div class="filelabel row-left"><p>附件:</p></div>
-            <div class="row-right">
-                <el-table
-                    :data="attachment"
-                    @row-click="clickrow"
-                    :row-style="{cursor:'pointer'}"
-                    style="width: 100%"
-                >
-                    <el-table-column
-                            v-if="attachment && attachment.length > 0"
-                            prop="filename"
-                            min-width="80%"
-                            label="附件（点击可下载）">
-                    </el-table-column>
-                    <el-table-column
-                            v-if="attachment && attachment.length === 0"
-                            prop="filename"
-                            min-width="80%"
-                            label="附件">
-                    </el-table-column>
-                    <el-table-column
-                            label="操作" min-width="20%" algin="left">
-                        <template slot-scope="scope">
-                            <el-button @click="handleDelete(scope.$index)" type="text" size="small">删除</el-button>
-                        </template>
-                    </el-table-column>
-                </el-table>
-                <div style="width: 100%;margin-top: 15px">
-                    <cli-upload v-on:notifyurl="urlget" v-bind:urltype="notify" style="margin-top: 0"></cli-upload>
-                </div>
-            </div>
+<!--        <div class="fujian display-row" style="margin-top: 80px;">-->
+<!--            <div class="filelabel row-left"><p>附件:</p></div>-->
+<!--            <div class="row-right">-->
+<!--                <el-table-->
+<!--                    :data="attachment"-->
+<!--                    @row-click="clickrow"-->
+<!--                    :row-style="{cursor:'pointer'}"-->
+<!--                    style="width: 100%"-->
+<!--                >-->
+<!--                    <el-table-column-->
+<!--                            v-if="attachment && attachment.length > 0"-->
+<!--                            prop="filename"-->
+<!--                            min-width="80%"-->
+<!--                            label="附件（点击可下载）">-->
+<!--                    </el-table-column>-->
+<!--                    <el-table-column-->
+<!--                            v-if="attachment && attachment.length === 0"-->
+<!--                            prop="filename"-->
+<!--                            min-width="80%"-->
+<!--                            label="附件">-->
+<!--                    </el-table-column>-->
+<!--                    <el-table-column-->
+<!--                            label="操作" min-width="20%" algin="left">-->
+<!--                        <template slot-scope="scope">-->
+<!--                            <el-button @click="handleDelete(scope.$index)" type="text" size="small">删除</el-button>-->
+<!--                        </template>-->
+<!--                    </el-table-column>-->
+<!--                </el-table>-->
+<!--                <div style="width: 100%;margin-top: 15px">-->
+<!--                    <cli-upload v-on:notifyurl="urlget" v-bind:urltype="notify" style="margin-top: 0"></cli-upload>-->
+<!--                </div>-->
+<!--            </div>-->
 
-        </div>
+<!--        </div>-->
 
         <div class="row-button" v-if="edittype !== 3">
             <el-button type="success" style="width: 100px;margin-right: 30px" v-if="edittype !== 3"  @click="submitInfo" >
@@ -1035,7 +1035,7 @@
     }
 
     .row-button {
-        margin-top: 30px;
+        margin-top: 100px;
         display: -webkit-flex; /* Safari */
         -webkit-justify-content: flex-end; /* Safari 6.1+ */
         display: flex;
