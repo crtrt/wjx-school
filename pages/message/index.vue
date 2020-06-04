@@ -5,7 +5,7 @@
 
         <div class="bodyDiv">
             <position :positionName="position.name"></position>
-            <list :pageIndex="pageIndex" :roleType="roleType"></list>
+            <list :pageIndex="pageIndex" :roleType="roleType" style="margin-top: 20px"></list>
         </div>
     </div>
 </template>

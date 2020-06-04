@@ -4,7 +4,7 @@
         <cli-menu class="menuClass" :pageIndex="pageIndex" ></cli-menu>
         <div class="bodyDiv" v-if="ifshow">
             <position :positionName="position.name" :have-back="position.haveBack" @positionBack="clickBack" style="font-size:22px"></position>
-            <notifyTable :showType="showType" style="width: 100%"> </notifyTable>
+            <notifyTable :showType="showType" style="width: 100%; margin-top: 20px"> </notifyTable>
         </div>
 
     </div>

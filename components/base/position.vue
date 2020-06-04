@@ -1,6 +1,6 @@
 <template>
   <div style="height: 40px; padding-top:10px; padding-bottom: 10px; display: flex; justify-content: space-between">
-    <div class="positionClass"><strong>{{positionName}}</strong></div>
+    <div class="positionClass" style="font-size: 22px"><strong>{{positionName}}</strong></div>
     <div v-if="haveBack" class="returnClass" @click="clickBack">{{rightName}}</div>
   </div>
 </template>
