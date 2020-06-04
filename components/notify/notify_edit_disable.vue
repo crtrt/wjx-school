@@ -3,7 +3,7 @@
       <div style="margin-top: 15px;width: 100%;" class="display-row">
           <div class="filelabel row-left"><p>名称:</p></div>
           <div class="titleinput row-right" style="padding-left: 10px">
-              <p> {{notifytitle}}</p>
+              <p> {{notifytitle.split('/')[0]}}</p>
           </div>
       </div>
 

@@ -3,7 +3,7 @@
         <div  style="display: table; width: 100%; padding-left: 10px; padding-top: 20px; padding-bottom:15px; padding-right: 10px">
             <div style="display: table-row">
                 <div class="tableTitle" style="width: 5%; text-align: center;padding-left: 10px">
-                    序号
+                    #
                 </div>
                 <div class="tableTitle" style="text-align: center;width: 30%">
                     名称
@@ -23,12 +23,12 @@
                 <div class="tableTitle" v-if="type==='0'&&!inMain">
                 </div>
             </div>
-            <div :class="{'tablerow':true, 'grayLine': (index % 2 === 0)}" style="display: table-row;" v-if="notifyList.length > 0" v-for="(item,index) in notifyList" :key="item.id">
+            <div :class="{'tablerow':true, 'grayLine': (index % 2 === 0)}" style="display: table-row;" v-if="item.title.split('/')[1] === accountinfo&&notifyList.length > 0" v-for="(item,index) in notifyList" :key="item.id">
                 <div class="tableCell" style="text-align: center">
-                    {{index+1}}
+                    ·
                 </div>
                 <div class="tableCell" style="text-align: center;width: 30%">
-                    {{item.title}}
+                    {{item.title.split('/')[0]}}
                 </div>
                 <div class="tableCell" style="width: 20%; text-align: center" v-if="type==='0'">
                     <el-progress :text-inside="true" :stroke-width="26" :percentage="item.percentage" :color="percentageColor"></el-progress>
@@ -87,6 +87,7 @@
 
         data(){
             return{
+                accountinfo:0,
                 inMain: false,
                 total:0,
                 currentPage:1,
@@ -101,6 +102,11 @@
 
         mounted:function(){
             this.getNotifyList();
+
+            let ourinfo = Cookies.get('info')
+            let sndinfo = ourinfo.split(',')[1]
+            this.accountinfo = sndinfo.split(':')[1]
+
         },
 
         computed: {
