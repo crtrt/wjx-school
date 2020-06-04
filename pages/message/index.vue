@@ -5,7 +5,7 @@
 
         <div class="bodyDiv">
             <position :positionName="position.name"></position>
-            <list :pageIndex="pageIndex" :roleType="roleType"></list>
+            <list :pageIndex="pageIndex" :roleType="roleType" style="margin-top: 20px"></list>
         </div>
         <cli-footer style="position: absolute; bottom: 0;"></cli-footer>
     </div>

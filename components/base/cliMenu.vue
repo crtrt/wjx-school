@@ -18,16 +18,10 @@
           <div v-bind:class="{ 'menuclick': (pageIndex === '2') }"  style="font-family: '黑体'; width:100%;font-size: 16px"  ><i class="el-icon-bell"></i>通知公告</div>
         </el-menu-item>
         <el-menu-item class="menuItem" index="3"  @click=toCliNoticePage style="padding: 0; ">
-          <div v-bind:class="{ 'menuclick': (pageIndex === '3') }"  style="font-family: '黑体'; width:100%;font-size: 16px"  ><i class="el-icon-edit"></i>信息征集</div>
+          <div v-bind:class="{ 'menuclick': (pageIndex === '3') }"  style="font-family: '黑体'; width:100%;font-size: 16px"  ><i class="el-icon-edit"></i>问卷发布</div>
         </el-menu-item>
 
-        <el-menu-item class="menuItem" index="4" @click="toPaperPageHome" style="padding: 0;">
-          <div v-bind:class="{ 'menuclick' : (pageIndex === '4') }" style="font-family: '黑体'; width: 100%; font-size: 16px;">
-            <i class="el-icon-printer"></i>论文认领</div>
-        </el-menu-item>
-      <el-menu-item class="menuItem"   index="11" style="padding: 0; " @click="toDatalistPage">
-          <div v-bind:class="{ 'menuclick': (pageIndex === '11') }"  style="font-family: '黑体'; width:100%;font-size: 16px"  ><i class="el-icon-edit-outline"></i>数据清单</div>
-        </el-menu-item>
+
         <el-menu-item v-if="type === '0'" class="menuItem"   index="5" style="padding: 0; " @click="toProcessManagementPage">
           <div v-bind:class="{ 'menuclick': (pageIndex === '5') }"  style="font-family: '黑体'; width:100%;font-size: 16px"  ><i class="el-icon-view"></i>用户管理</div>
         </el-menu-item>
