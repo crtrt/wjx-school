@@ -265,6 +265,7 @@
 
         data() {
             return {
+                accountinfo: 0,
                 dialogModal: false,
                 isShowFaculty: false,
                 notifyRange: '',
@@ -325,6 +326,11 @@
             }
         },
         mounted: function () {
+            let ourinfo = Cookies.get('info')
+            let sndinfo = ourinfo.split(',')[1]
+            this.accountinfo = sndinfo.split(':')[1]
+
+            console.log(Cookies.get('accountID'))
 
             let data1 = {
                 token: this.token
@@ -796,14 +802,14 @@
                     let data = {
                         query_id:this.infoid,
                         token: this.token,
-                        title: this.notifytitle,
+                        title: this.notifytitle+'/'+this.accountinfo,
                         content: this.detailContent,
                         user_ids: range_ids,
                     }
 
                     API.updateCommon(data).then(res => {
                         if (res == true) {
-                            alert("发布成功！")
+                            alert(data.title+"发布成功！")
                             this.$router.push({path: `/notify/`})
                         }
                         else
@@ -820,7 +826,7 @@
                     let data = {
                         is_temporary: 0,
                         token: this.token,
-                        title: this.notifytitle,
+                        title: this.notifytitle+'/'+this.accountinfo,
                         content: this.detailContent,
                         attachment_urls: attachment_id,
                         user_ids: range_ids,
@@ -852,7 +858,7 @@
                 let data = {
                     is_temporary: 1,
                     token: this.token,
-                    title: this.notifytitle,
+                    title: this.notifytitle+'/'+this.accountinfo,
                     content: this.detailContent,
                     attachment_urls: attachment_id,
                     user_ids: range_ids

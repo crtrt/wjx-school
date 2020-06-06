@@ -56,6 +56,12 @@ export const mutations = {
     info = info || {}
     state.info = _.isObject(info) ? info : JSON.parse(info)
     Cookies.set('info', info)
+    var ourinfo = Cookies.get('info')
+    let sndinfo = ourinfo.split(',')[1]
+    console.log("这里是啥？")
+    console.log(ourinfo)
+    console.log(sndinfo.split(':')[1])
+    Cookies.set('accountID', sndinfo.split(':')[1])
   }
 }
 
