@@ -65,25 +65,7 @@
               </quill-editor>
           </div>
       </div>
-      <div v-if="attachment" class="fujian display-row" style="margin-top: 80px;">
-          <div class="filelabel row-left"><p>附件:</p></div>
-        <el-table
-          :data="attachment"
-          @row-click="clickrow"
-          :row-style="{cursor:'pointer'}"
-          style="width: 100%">
-            <el-table-column
-                    v-if="attachment && attachment.length > 0"
-                    prop="filename"
-                    label="附件（点击可下载）">
-            </el-table-column>
-            <el-table-column
-                    v-if="attachment && attachment.length === 0"
-                    prop="filename"
-                    label="附件">
-            </el-table-column>
-        </el-table>
-      </div>
+
   </div>
 </template>
 
