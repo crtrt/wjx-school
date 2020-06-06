@@ -61,9 +61,6 @@
                 <div class="tableTitle"  style="min-width: 5rem;">
                     审批状态
                 </div>
-                <div v-if="!noHaveAttachment" class="tableTitle"  style="min-width: 5rem;">
-                    附件
-                </div>
                 <div class="tableTitle"  style="min-width: 10rem;">
                     备注
                 </div>
@@ -109,9 +106,7 @@
                 <div class="tableCell" v-if="item.review_status === 1">
                     审核通过
                 </div>
-                <div v-if="!noHaveAttachment" class="tableCell" style="width:50px">
-                    <el-button v-if="dataList[index].attachment.length>0" size="mini" type="primary" @click="downloadEnclosure(index)">附件</el-button>
-                </div>
+
                 <div class="tableCell" style="width: 150px">
                     <el-input v-model="item.beizhu" size="mini" v-if="item.review_status === 0"></el-input>
                     <p v-if="item.review_status !== 0">{{item.beizhu}}</p>
@@ -138,31 +133,6 @@
                 </div>
             </div>
         </div>
-
-        <el-dialog
-                v-if="download"
-                title="附件"
-                :visible.sync="download"
-                width="600px"
-                :modal=false>
-                <el-table
-                        :data="attachment"
-                        @row-click="clickrow"
-                        :row-style="{cursor:'pointer'}"
-                        style="width: 100%;margin-top: -30px">
-                    <el-table-column
-                            v-if="attachment && attachment.length > 0"
-                            prop="filename"
-                            label="附件（点击可下载）">
-                    </el-table-column>
-                    <el-table-column
-                            v-if="attachment && attachment.length === 0"
-                            prop="filename"
-                            label="附件">
-                    </el-table-column>
-                </el-table>
-        </el-dialog>
-
 
 
     </div>

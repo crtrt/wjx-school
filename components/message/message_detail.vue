@@ -39,28 +39,7 @@
             </div>
         </template>
 
-        <div v-if="showType === 1">
-            <el-table
-                    :data="attachment"
-                    @row-click="clickrow"
-                    :row-style="{cursor:'pointer'}"
-                    style="width: 100%">
-                <el-table-column
-                        prop="filename"
-                        min-width="80%"
-                        label="附件（点击可下载）">
-                </el-table-column>
-                <el-table-column
-                        label="操作" min-width="20%" algin="left">
-                    <template slot-scope="scope">
-                        <el-button @click="handleDelete(scope.$index)" type="text" size="small">删除</el-button>
-                    </template>
-                </el-table-column>
-            </el-table>
-            <div style="width: 100%;margin-top: 15px" v-if="!isView">
-                <cli-upload v-on:notifyurl="urlget" v-bind:urltype="uploadType" style="margin-top: 0"></cli-upload>
-            </div>
-        </div>
+
 
     </div>
 </template>

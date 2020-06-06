@@ -31,7 +31,6 @@
 
 
         </div>
-        <cli-footer style="position: absolute; bottom: 0;"></cli-footer>
     </div>
 </template>
 
