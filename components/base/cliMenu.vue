@@ -18,7 +18,7 @@
           <div v-bind:class="{ 'menuclick': (pageIndex === '2') }"  style="font-family: '黑体'; width:100%;font-size: 16px"  ><i class="el-icon-bell"></i>通知公告</div>
         </el-menu-item>
         <el-menu-item class="menuItem" index="3"  @click=toCliNoticePage style="padding: 0; ">
-          <div v-bind:class="{ 'menuclick': (pageIndex === '3') }"  style="font-family: '黑体'; width:100%;font-size: 16px"  ><i class="el-icon-edit"></i>问卷发布</div>
+          <div v-bind:class="{ 'menuclick': (pageIndex === '3') }"  style="font-family: '黑体'; width:100%;font-size: 16px"  ><i class="el-icon-edit"></i>问卷中心</div>
         </el-menu-item>
 
 
