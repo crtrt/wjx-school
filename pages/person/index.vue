@@ -31,7 +31,7 @@
                         <div>
                             <el-autocomplete
                                     prefix-icon="el-icon-search"
-                                    placeholder="请输入姓名或者工号进行搜索"
+                                    placeholder="请输入姓名或者工号/学号进行搜索"
                                     size="mini"
                                     clearable
                                     :trigger-on-focus="false"
@@ -60,13 +60,13 @@
                                     姓名
                                 </div>
                                 <div class="tableTitle">
-                                    工号
+                                    工号/学号
                                 </div>
                                 <div class="tableTitle" style="width: 300px;">
                                     <el-select
                                             size="mini"
                                             v-model="unitSelected"
-                                            placeholder="单位"
+                                            placeholder="学院"
                                             multiple value="string"
                                             @change="changeFunc">
                                         <el-option
@@ -81,7 +81,7 @@
                                     <el-select
                                             size="mini"
                                             v-model="positionSelected"
-                                            placeholder="职务"
+                                            placeholder="年级"
                                             multiple value="string"
                                             @change="changeFunc">
                                         <el-option
@@ -92,21 +92,21 @@
                                         </el-option>
                                     </el-select>
                                 </div>
-                                <div class="tableTitle" style="width: 100px;">
-                                    <el-select
-                                            size="mini"
-                                            v-model="jobSelected"
-                                            placeholder="职称"
-                                            multiple value="string"
-                                            @change="changeFunc">
-                                        <el-option
-                                                v-for="item in jobList"
-                                                :key="item.id"
-                                                :label="item.name"
-                                                :value="item.id">
-                                        </el-option>
-                                    </el-select>
-                                </div>
+<!--                                <div class="tableTitle" style="width: 100px;">-->
+<!--                                    <el-select-->
+<!--                                            size="mini"-->
+<!--                                            v-model="jobSelected"-->
+<!--                                            placeholder="职称"-->
+<!--                                            multiple value="string"-->
+<!--                                            @change="changeFunc">-->
+<!--                                        <el-option-->
+<!--                                                v-for="item in jobList"-->
+<!--                                                :key="item.id"-->
+<!--                                                :label="item.name"-->
+<!--                                                :value="item.id">-->
+<!--                                        </el-option>-->
+<!--                                    </el-select>-->
+<!--                                </div>-->
                                 <div class="tableTitle">
                                     入职年份
                                 </div>
@@ -136,9 +136,9 @@
                                 <div class="tableCell">
                                     {{item.positionInfo.name}}
                                 </div>
-                                <div class="tableCell">
-                                    {{item.jobtitleInfo.name}}
-                                </div>
+<!--                                <div class="tableCell">-->
+<!--                                    {{item.jobtitleInfo.name}}-->
+<!--                                </div>-->
                                 <div class="tableCell">
                                     {{item.entry_time}}
                                 </div>

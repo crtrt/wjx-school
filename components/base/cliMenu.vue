@@ -22,7 +22,7 @@
         </el-menu-item>
 
 
-        <el-menu-item v-if="type === '0' && this.account_name === '管理员'" class="menuItem"   index="5" style="padding: 0; " @click="toProcessManagementPage">
+        <el-menu-item v-if="type === '0' && this.account_name === '李涛'" class="menuItem"   index="5" style="padding: 0; " @click="toProcessManagementPage">
           <div v-bind:class="{ 'menuclick': (pageIndex === '5') }"  style="font-family: '黑体'; width:100%;font-size: 16px"  ><i class="el-icon-view"></i>用户管理</div>
         </el-menu-item>
 
