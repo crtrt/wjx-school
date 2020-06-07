@@ -58,7 +58,7 @@
                 subTabIndex: 0,
 
                 position: {
-                    name: '问卷 >> ',
+                    name: '问卷 >> 问卷详情',
                     haveBack: true,
                 },
                 notifyType: 3,
@@ -89,7 +89,7 @@
                         alert(res.message);
                         return;
                     }
-                    this.position.name += res.answer_info.name;
+                    // this.position.name += res.answer_info.name;
                     this.beizhu = res.answer_info.beizhu && res.answer_info.beizhu !== '' ? res.answer_info.beizhu : '无';
                     this.$refs.notifyCom.setData(res.answer_info);
                     res.answer_info.surveyQuestion.forEach(item => {

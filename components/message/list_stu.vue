@@ -31,7 +31,7 @@
                     {{index + 1}}
                 </div>
                 <div class="tableCell" style="width: 30%; text-align: center">
-                    {{item.name}}
+                    {{item.name.split('/')[0]}}
                 </div>
                 <div class="tableCell" style="width: 20%; text-align: center" v-if="type==='0'">
                     <el-progress :text-inside="true" :stroke-width="26" :percentage="item.infopercentage" :color="percentageColor"></el-progress>

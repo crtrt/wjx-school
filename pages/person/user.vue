@@ -65,7 +65,6 @@
                             </div>
                         </div>
 
-                        <a style="margin-left: 50px" href="http://multi-file.tc4ldl.com/keyan/upload/setting/2019/11/041572851031/科研系统使用说明（用户）.pdf">用户手册</a>
                         <el-button size="mid" type="primary" style="margin-left: 100px; margin-top: 30px" @click="getUpdateInfo()">确认修改</el-button>
 
                     </el-tab-pane>
