@@ -12,17 +12,17 @@
                     姓名
                 </div>
                 <div class="tableTitle">
-                    工号
+                    工号/学号
                 </div>
                 <div class="tableTitle">
-                    单位
+                    学院
                 </div>
                 <div class="tableTitle">
-                    职务（系统）
+                    联系方式
                 </div>
-                <div class="tableTitle">
-                    职称（系统）
-                </div>
+<!--                <div class="tableTitle">-->
+<!--                    职称（系统）-->
+<!--                </div>-->
                 <div v-if="showType" class="tableTitle">
                     审批状态
                 </div>
@@ -48,11 +48,11 @@
                     {{item.unitInfo.name}}
                 </div>
                 <div class="tableCell">
-                    {{item.positionInfo.name}}
+                    {{item.phone}}
                 </div>
-                <div class="tableCell">
-                    {{item.jobtitleInfo.name}}
-                </div>
+<!--                <div class="tableCell">-->
+<!--                    {{item.jobtitleInfo.name}}-->
+<!--                </div>-->
                 <div class="tableCell" v-if="item.review_status === -1">
                     审核未通过
                 </div>

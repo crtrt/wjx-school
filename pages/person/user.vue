@@ -47,14 +47,14 @@
                             </div>
                         </div>
 
-                        <div v-if="user_type !== '2'" style="margin-top: 15px; margin-left: 50px;" class="display-row">
-                            <div class="filelabel row-left" style="margin-top: 5px; width: 100px"><p>职务:</p></div>
-                            <div class="titleinput row-right">
-                                <el-select placeholder="职务" v-model="user_info.position_id" style="width: 275px">
-                                    <el-option v-for="item in position_list" :key="item.id" :label="item.name" :value="item.id"></el-option>
-                                </el-select>
-                            </div>
-                        </div>
+<!--                        <div v-if="user_type !== '2'" style="margin-top: 15px; margin-left: 50px;" class="display-row">-->
+<!--                            <div class="filelabel row-left" style="margin-top: 5px; width: 100px"><p>职务:</p></div>-->
+<!--                            <div class="titleinput row-right">-->
+<!--                                <el-select placeholder="职务" v-model="user_info.position_id" style="width: 275px">-->
+<!--                                    <el-option v-for="item in position_list" :key="item.id" :label="item.name" :value="item.id"></el-option>-->
+<!--                                </el-select>-->
+<!--                            </div>-->
+<!--                        </div>-->
 
                         <div v-if="user_type !== '2'" style="margin-top: 15px; margin-left: 50px;" class="display-row">
                             <div class="filelabel row-left" style="margin-top: 5px; width: 100px"><p>单位:</p></div>

@@ -7,11 +7,11 @@
         <div style="margin-top: 10px;">
             <el-checkbox v-model="fieldShow.showIndex">序号</el-checkbox>
             <el-checkbox v-model="fieldShow.showName">姓名</el-checkbox>
-            <el-checkbox v-model="fieldShow.showJobNumber">工号</el-checkbox>
-            <el-checkbox v-model="fieldShow.showUnit">单位</el-checkbox>
-            <el-checkbox v-model="fieldShow.showZhiWu">职务（系统）</el-checkbox>
-            <el-checkbox v-model="fieldShow.showZhiChent">职称（系统）</el-checkbox>
-            <el-checkbox v-model="fieldShow.showTiJiaoTime">提交时间</el-checkbox>
+            <el-checkbox v-model="fieldShow.showJobNumber">工号/学号</el-checkbox>
+            <el-checkbox v-model="fieldShow.showUnit">单位/学院</el-checkbox>
+<!--            <el-checkbox v-model="fieldShow.showZhiWu">职务</el-checkbox>-->
+<!--            <el-checkbox v-model="fieldShow.showZhiChent">职称</el-checkbox>-->
+<!--            <el-checkbox v-model="fieldShow.showTiJiaoTime">提交时间</el-checkbox>-->
         </div>
 
         <div class="titleClass" style="margin-top: 5px">
@@ -126,7 +126,7 @@
 
             <div style="padding-right: 15px">
                 <div>
-                    <el-button class="bottomButton" size="mini" type="primary" @click="downloadBatch">批量下载</el-button>
+<!--                    <el-button class="bottomButton" size="mini" type="primary" @click="downloadBatch">批量下载</el-button>-->
                     <el-button class="bottomButton" size="mini" type="primary" @click="downloadMessage">信息导出</el-button>
                     <el-button class="bottomButton" size="mini" type="primary" @click="getcheckAnswer(-1)">不通过</el-button>
                     <el-button class="bottomButton" size="mini" type="primary" @click="getcheckAnswer(1)">通过</el-button>
