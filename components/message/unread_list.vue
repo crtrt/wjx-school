@@ -12,17 +12,17 @@
                     姓名
                 </div>
                 <div class="tableTitle">
-                    工号
+                    工号/学号
                 </div>
                 <div class="tableTitle">
-                    单位
+                    学院
                 </div>
                 <div class="tableTitle">
-                    职务（系统）
+                    联系方式
                 </div>
-                <div class="tableTitle">
-                    职称（系统）
-                </div>
+<!--                <div class="tableTitle">-->
+<!--                    职称（系统）-->
+<!--                </div>-->
                 <div v-if="showType" class="tableTitle">
                     审批状态
                 </div>
@@ -48,11 +48,11 @@
                     {{item.unitInfo.name}}
                 </div>
                 <div class="tableCell">
-                    {{item.positionInfo.name}}
+                    {{item.phone}}
                 </div>
-                <div class="tableCell">
-                    {{item.jobtitleInfo.name}}
-                </div>
+<!--                <div class="tableCell">-->
+<!--                    {{item.jobtitleInfo.name}}-->
+<!--                </div>-->
                 <div class="tableCell" v-if="item.review_status === -1">
                     审核未通过
                 </div>
@@ -82,7 +82,7 @@
             <div style="display: flex; flex-direction: row-reverse">
                 <el-button v-if="showType" class="bottomButton" size="mini" type="primary" @click="downloadBatch">批量下载</el-button>
                 <el-button v-if="showType" class="bottomButton" size="mini" type="primary" @click="downloadMessage">信息导出</el-button>
-<!--                <el-button v-if="!showType" class="bottomButton" size="mini" type="primary" @click="sendEmail">邮件提醒</el-button>-->
+                <el-button v-if="!showType" class="bottomButton" size="mini" type="primary" @click="sendEmail">邮件提醒</el-button>
 <!--                <el-button v-if="!showType" class="bottomButton" size="mini" type="primary" @click="sendMessage">短信提醒</el-button>-->
                 <notify_btn v-if="!showType" :is_message="1" :create_time="create_time" :name="name" class="bottomButton">生成消息提醒</notify_btn>
                 <el-button v-if="showType" class="bottomButton" size="mini" type="primary" @click="getcheckAnswer(-1)">不通过</el-button>

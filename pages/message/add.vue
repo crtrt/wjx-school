@@ -43,6 +43,7 @@
 
         data(){
             return{
+                accountinfo: 0,
                 pageIndex: "3",
                 position: {
                     name: '问卷 >> 新增问卷',
@@ -60,6 +61,9 @@
         },
 
         mounted:function(){
+            let ourinfo = Cookies.get('info')
+            let sndinfo = ourinfo.split(',')[1]
+            this.accountinfo = sndinfo.split(':')[1]
             this.getTemp();
         },
 
@@ -101,7 +105,7 @@
                     is_temporary: isZanCun,
                     start_timestamp: notifyData.timeRange[0],
                     stop_timestamp: notifyData.timeRange[1],
-                    name: notifyData.title,
+                    name: notifyData.title+'/'+this.accountinfo,
                     requirement: notifyData.content,
                     survey_range: notifyData.selectId,
                     attachment_url: notifyData.attachment,

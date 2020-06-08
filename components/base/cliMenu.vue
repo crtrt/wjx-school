@@ -33,9 +33,9 @@
 
 
 
-        <el-menu-item v-if="type === '0'" class="menuItem"   index="21" style="padding: 0; " @click="toDownloadPage">
-          <div v-bind:class="{ 'menuclick': (pageIndex === '21') }"  style="font-family: '黑体'; width:100%;font-size: 16px"  ><i class="el-icon-download"></i>下载任务</div>
-        </el-menu-item>
+<!--        <el-menu-item v-if="type === '0'" class="menuItem"   index="21" style="padding: 0; " @click="toDownloadPage">-->
+<!--          <div v-bind:class="{ 'menuclick': (pageIndex === '21') }"  style="font-family: '黑体'; width:100%;font-size: 16px"  ><i class="el-icon-download"></i>下载任务</div>-->
+<!--        </el-menu-item>-->
 
         <el-menu-item class="menuItem"   index="8" style="padding: 0; " @click="logout">
           <div v-bind:class="{ 'menuclick': (pageIndex === '8') }"  style="font-family: '黑体'; width:100%;font-size: 16px"  ><i class="el-icon-d-arrow-left"></i>退出</div>

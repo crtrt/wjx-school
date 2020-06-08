@@ -28,7 +28,7 @@
                                 {{index+1}}
                             </td>
                             <td class="tableCell" style="text-align: center">
-                                {{item.title}}
+                                {{item.title.split('/')[0]}}
                             </td>
                             <td class="tableCell" style="text-align: center">
                                 {{item.create_time}}
@@ -42,7 +42,7 @@
                                 {{index+1}}
                             </td>
                             <td class="tableCell" style="text-align:center" >
-                                {{item.title}}
+                                {{item.title.split('/')[0]}}
                             </td>
                             <td class="tableCell" style="text-align: center">
                                 {{item.create_time}}
@@ -56,7 +56,7 @@
                                 {{index+1}}
                             </td>
                             <td class="tableCell" style="text-align:center" >
-                                {{item.title}}
+                                {{item.title.split('/')[0]}}
                             </td>
                             <td class="tableCell" style="text-align: center">
                                 {{item.create_time}}
@@ -70,7 +70,7 @@
                                 {{index+1}}
                             </td>
                             <td class="tableCell" style="text-align: center" >
-                                {{item.title}}
+                                {{item.title.split('/')[0]}}
                             </td>
                             <td class="tableCell" style="text-align: center">
                                 {{item.create_time}}

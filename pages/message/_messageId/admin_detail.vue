@@ -58,7 +58,7 @@
             return {
                 messageId:-1,
                 position: {
-                    name: '问卷 >> ',
+                    name: '问卷 >> 问卷详情',
                     haveBack: true,
                 },
                 notifyType: 3,
@@ -99,7 +99,7 @@
                         return;
                     }
 
-                    this.position.name += res.survey_info.name;
+                    // this.position.name += res.survey_info.name;
                     this.$refs.notifyCom.setData(res.survey_info);
                     this.$refs.zhengjiCom.setData(res.survey_info.surveyQuestion);
 

@@ -3,7 +3,7 @@
         <div  style="display: table; width: 100%; padding-left: 10px; padding-top: 20px; padding-bottom: 20px; padding-right: 10px">
             <div style="display: table-row">
                 <div class="tableTitle" style="width: 5%; text-align: center;padding-left: 10px">
-                    #
+                    序号
                 </div>
                 <div class="tableTitle" style="width: 30%; text-align: center">
                     名称
@@ -26,9 +26,9 @@
                 </div>
 
             </div>
-            <div :class="{'tablerow':true, 'grayLine': (index % 2 === 0)}" style="display: table-row;" v-if="item.name.split('/')[1] === accountinfo&&surveyList.length > 0" v-for="(item,index) in surveyList" :key="item.id">
+            <div :class="{'tablerow':true, 'grayLine': (index % 2 === 0)}" style="display: table-row;" v-if="surveyList.length > 0" v-for="(item,index) in surveyList" :key="item.id">
                 <div class="tableCell" style="width: 5%; text-align: center; " >
-                    ·
+                    {{index + 1}}
                 </div>
                 <div class="tableCell" style="width: 30%; text-align: center">
                     {{item.name.split('/')[0]}}
@@ -85,7 +85,6 @@
         },
         data(){
             return{
-                accountinfo:0,
                 inMain:false,
                 hidden:true,
                 total:0,
@@ -99,9 +98,6 @@
         },
 
         mounted:function(){
-            let ourinfo = Cookies.get('info')
-            let sndinfo = ourinfo.split(',')[1]
-            this.accountinfo = sndinfo.split(':')[1]
             this.isInMain();
             this.getSurveyList();
         },

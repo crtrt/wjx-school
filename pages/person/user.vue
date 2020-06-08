@@ -47,14 +47,14 @@
                             </div>
                         </div>
 
-                        <div v-if="user_type !== '2'" style="margin-top: 15px; margin-left: 50px;" class="display-row">
-                            <div class="filelabel row-left" style="margin-top: 5px; width: 100px"><p>职务:</p></div>
-                            <div class="titleinput row-right">
-                                <el-select placeholder="职务" v-model="user_info.position_id" style="width: 275px">
-                                    <el-option v-for="item in position_list" :key="item.id" :label="item.name" :value="item.id"></el-option>
-                                </el-select>
-                            </div>
-                        </div>
+<!--                        <div v-if="user_type !== '2'" style="margin-top: 15px; margin-left: 50px;" class="display-row">-->
+<!--                            <div class="filelabel row-left" style="margin-top: 5px; width: 100px"><p>职务:</p></div>-->
+<!--                            <div class="titleinput row-right">-->
+<!--                                <el-select placeholder="职务" v-model="user_info.position_id" style="width: 275px">-->
+<!--                                    <el-option v-for="item in position_list" :key="item.id" :label="item.name" :value="item.id"></el-option>-->
+<!--                                </el-select>-->
+<!--                            </div>-->
+<!--                        </div>-->
 
                         <div v-if="user_type !== '2'" style="margin-top: 15px; margin-left: 50px;" class="display-row">
                             <div class="filelabel row-left" style="margin-top: 5px; width: 100px"><p>单位:</p></div>
@@ -65,7 +65,6 @@
                             </div>
                         </div>
 
-                        <a style="margin-left: 50px" href="http://multi-file.tc4ldl.com/keyan/upload/setting/2019/11/041572851031/科研系统使用说明（用户）.pdf">用户手册</a>
                         <el-button size="mid" type="primary" style="margin-left: 100px; margin-top: 30px" @click="getUpdateInfo()">确认修改</el-button>
 
                     </el-tab-pane>

@@ -380,7 +380,7 @@
                             alert(res.message);
                             return;
                         }
-                        this.notifytitle = res.title
+                        this.notifytitle = res.title.split('/')[0]
                         this.detailContent = res.content
                         this.attachment = res.attachment
                         res.range.forEach(item=>{
@@ -809,7 +809,7 @@
 
                     API.updateCommon(data).then(res => {
                         if (res == true) {
-                            alert(data.title+"发布成功！")
+                            alert("发布成功！")
                             this.$router.push({path: `/notify/`})
                         }
                         else

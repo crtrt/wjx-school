@@ -163,8 +163,8 @@
 
                         <div style="float:right;margin-right: 10px;float: left;margin-left: 80px;margin-top: 5px">
                             <el-button plain v-if="isAll===false" class="bottomButton" size="mini" type="primary" @click="deletDialogVisible = true">删除成员</el-button>
-                            <el-button plain v-if="isAll" class="bottomButton" size="mini" type="primary" @click="downloadMuBan">模板下载</el-button>
-                            <el-button plain v-if="isAll" class="bottomButton" size="mini" type="primary" @click="uploadMsg=true">人员导入</el-button>
+<!--                            <el-button plain v-if="isAll" class="bottomButton" size="mini" type="primary" @click="downloadMuBan">模板下载</el-button>-->
+<!--                            <el-button plain v-if="isAll" class="bottomButton" size="mini" type="primary" @click="uploadMsg=true">人员导入</el-button>-->
                             <el-button plain v-if="isAll" class="bottomButton" size="mini" type="primary" @click="joindialogVisible=true">加入小组</el-button>
                         </div>
                     </div>
