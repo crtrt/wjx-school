@@ -13,14 +13,14 @@
             </el-card>
 
             <el-card style="margin-top: 20px;">
-                <div style="display: flex; margin-top: 20px; margin-left: 20px;">
-                    <p class="beizhu" style="color: #920000;">备注:</p>
-                    <p class="beizhu">
-                        <span v-if="review_status === 0" style="color: #920000">(尚未通过审核)</span>
-                        <span v-if="review_status === 1" style="color: #2ccd8d">(通过审核)</span>
-                        {{beizhu}}
-                    </p>
-                </div>
+<!--                <div style="display: flex; margin-top: 20px; margin-left: 20px;">-->
+<!--                    <p class="beizhu" style="color: #920000;">备注:</p>-->
+<!--                    <p class="beizhu">-->
+<!--                        <span v-if="review_status === 0" style="color: #920000">(尚未通过审核)</span>-->
+<!--                        <span v-if="review_status === 1" style="color: #2ccd8d">(通过审核)</span>-->
+<!--                        {{beizhu}}-->
+<!--                    </p>-->
+<!--                </div>-->
                 <Message_detail :isView="readMessage" ref="zhengjiCom"></Message_detail>
             </el-card>
 

@@ -61,9 +61,9 @@
                 <div class="tableTitle"  style="min-width: 5rem;">
                     审批状态
                 </div>
-                <div class="tableTitle"  style="min-width: 10rem;">
-                    备注
-                </div>
+<!--                <div class="tableTitle"  style="min-width: 10rem;">-->
+<!--                    备注-->
+<!--                </div>-->
             </div>
             <div :class="{'tablerow':true, 'grayLine':
             (index % 2 === 0)}" style="display: table-row;" v-if="dataList.length > 0" v-for="(item,index) in dataList" :key="item.id">
@@ -107,10 +107,10 @@
                     审核通过
                 </div>
 
-                <div class="tableCell" style="width: 150px">
-                    <el-input v-model="item.beizhu" size="mini" v-if="item.review_status === 0"></el-input>
-                    <p v-if="item.review_status !== 0">{{item.beizhu}}</p>
-                </div>
+<!--                <div class="tableCell" style="width: 150px">-->
+<!--                    <el-input v-model="item.beizhu" size="mini" v-if="item.review_status === 0"></el-input>-->
+<!--                    <p v-if="item.review_status !== 0">{{item.beizhu}}</p>-->
+<!--                </div>-->
             </div>
         </div>
 
