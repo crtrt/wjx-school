@@ -57,18 +57,18 @@
                 if (this.is_message === 1){
                     this.message = "同学您好！请您及时登录校园问卷管理系统" +
                         // API.qianduanURL +
-                        "，查阅管理员于" +
+                        "，查阅老师于" +
                         this.create_time +
                         "发布的问卷《" +
-                        this.name +
+                        this.name.split('/')[0] +
                         "》，并填写问卷，感谢您的支持！";
                 }else if (this.is_message === 0){
                     this.message = "同学您好！请您及时登录校园问卷管理系统" +
                         // API.qianduanURL +
-                        "，查阅管理员于" +
+                        "，查阅老师于" +
                         this.create_time +
                         "发布的通知《" +
-                        this.name +
+                        this.name.split('/')[0]  +
                         "》，并按通知要求开展相关工作，感谢您的支持！";
                 }
 
