@@ -7,11 +7,11 @@
         <div style="margin-top: 10px;">
             <el-checkbox v-model="fieldShow.showIndex">序号</el-checkbox>
             <el-checkbox v-model="fieldShow.showName">姓名</el-checkbox>
-            <el-checkbox v-model="fieldShow.showJobNumber">工号</el-checkbox>
-            <el-checkbox v-model="fieldShow.showUnit">单位</el-checkbox>
-            <el-checkbox v-model="fieldShow.showZhiWu">职务（系统）</el-checkbox>
-            <el-checkbox v-model="fieldShow.showZhiChent">职称（系统）</el-checkbox>
-            <el-checkbox v-model="fieldShow.showTiJiaoTime">提交时间</el-checkbox>
+            <el-checkbox v-model="fieldShow.showJobNumber">工号/学号</el-checkbox>
+            <el-checkbox v-model="fieldShow.showUnit">单位/学院</el-checkbox>
+<!--            <el-checkbox v-model="fieldShow.showZhiWu">职务</el-checkbox>-->
+<!--            <el-checkbox v-model="fieldShow.showZhiChent">职称</el-checkbox>-->
+<!--            <el-checkbox v-model="fieldShow.showTiJiaoTime">提交时间</el-checkbox>-->
         </div>
 
         <div class="titleClass" style="margin-top: 5px">
@@ -61,12 +61,9 @@
                 <div class="tableTitle"  style="min-width: 5rem;">
                     审批状态
                 </div>
-                <div v-if="!noHaveAttachment" class="tableTitle"  style="min-width: 5rem;">
-                    附件
-                </div>
-                <div class="tableTitle"  style="min-width: 10rem;">
-                    备注
-                </div>
+<!--                <div class="tableTitle"  style="min-width: 10rem;">-->
+<!--                    备注-->
+<!--                </div>-->
             </div>
             <div :class="{'tablerow':true, 'grayLine':
             (index % 2 === 0)}" style="display: table-row;" v-if="dataList.length > 0" v-for="(item,index) in dataList" :key="item.id">
@@ -109,13 +106,11 @@
                 <div class="tableCell" v-if="item.review_status === 1">
                     审核通过
                 </div>
-                <div v-if="!noHaveAttachment" class="tableCell" style="width:50px">
-                    <el-button v-if="dataList[index].attachment.length>0" size="mini" type="primary" @click="downloadEnclosure(index)">附件</el-button>
-                </div>
-                <div class="tableCell" style="width: 150px">
-                    <el-input v-model="item.beizhu" size="mini" v-if="item.review_status === 0"></el-input>
-                    <p v-if="item.review_status !== 0">{{item.beizhu}}</p>
-                </div>
+
+<!--                <div class="tableCell" style="width: 150px">-->
+<!--                    <el-input v-model="item.beizhu" size="mini" v-if="item.review_status === 0"></el-input>-->
+<!--                    <p v-if="item.review_status !== 0">{{item.beizhu}}</p>-->
+<!--                </div>-->
             </div>
         </div>
 
@@ -131,38 +126,13 @@
 
             <div style="padding-right: 15px">
                 <div>
-                    <el-button class="bottomButton" size="mini" type="primary" @click="downloadBatch">批量下载</el-button>
+<!--                    <el-button class="bottomButton" size="mini" type="primary" @click="downloadBatch">批量下载</el-button>-->
                     <el-button class="bottomButton" size="mini" type="primary" @click="downloadMessage">信息导出</el-button>
                     <el-button class="bottomButton" size="mini" type="primary" @click="getcheckAnswer(-1)">不通过</el-button>
                     <el-button class="bottomButton" size="mini" type="primary" @click="getcheckAnswer(1)">通过</el-button>
                 </div>
             </div>
         </div>
-
-        <el-dialog
-                v-if="download"
-                title="附件"
-                :visible.sync="download"
-                width="600px"
-                :modal=false>
-                <el-table
-                        :data="attachment"
-                        @row-click="clickrow"
-                        :row-style="{cursor:'pointer'}"
-                        style="width: 100%;margin-top: -30px">
-                    <el-table-column
-                            v-if="attachment && attachment.length > 0"
-                            prop="filename"
-                            label="附件（点击可下载）">
-                    </el-table-column>
-                    <el-table-column
-                            v-if="attachment && attachment.length === 0"
-                            prop="filename"
-                            label="附件">
-                    </el-table-column>
-                </el-table>
-        </el-dialog>
-
 
 
     </div>

@@ -12,7 +12,7 @@
                 <el-tab-pane label="基本信息">
                     <notify_edit :edittype="notifyType" ref="notifyCom"></notify_edit>
                 </el-tab-pane>
-                <el-tab-pane label="字段编辑">
+                <el-tab-pane label="问题编辑">
                     <data-edit ref="zhengjiCom"></data-edit>
                 </el-tab-pane>
             </el-tabs>
@@ -43,6 +43,7 @@
 
         data(){
             return{
+                accountinfo: 0,
                 pageIndex: "3",
                 position: {
                     name: '问卷 >> 新增问卷',
@@ -60,6 +61,9 @@
         },
 
         mounted:function(){
+            let ourinfo = Cookies.get('info')
+            let sndinfo = ourinfo.split(',')[1]
+            this.accountinfo = sndinfo.split(':')[1]
             this.getTemp();
         },
 
@@ -101,7 +105,7 @@
                     is_temporary: isZanCun,
                     start_timestamp: notifyData.timeRange[0],
                     stop_timestamp: notifyData.timeRange[1],
-                    name: notifyData.title,
+                    name: notifyData.title+'/'+this.accountinfo,
                     requirement: notifyData.content,
                     survey_range: notifyData.selectId,
                     attachment_url: notifyData.attachment,

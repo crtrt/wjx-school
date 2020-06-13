@@ -1,7 +1,7 @@
 <template>
     <div style="padding-left: 20px; padding-right: 20px; padding-bottom: 20px;">
         <div v-if="showType === 1" style="width: 100%; text-align: center" >
-            <strong style="font-size: 1.2rem">待填字段</strong>
+            <strong style="font-size: 1.2rem">待填问题</strong>
         </div>
 
         <template v-for="(item, index) in dataList">
@@ -39,28 +39,7 @@
             </div>
         </template>
 
-        <div v-if="showType === 1">
-            <el-table
-                    :data="attachment"
-                    @row-click="clickrow"
-                    :row-style="{cursor:'pointer'}"
-                    style="width: 100%">
-                <el-table-column
-                        prop="filename"
-                        min-width="80%"
-                        label="附件（点击可下载）">
-                </el-table-column>
-                <el-table-column
-                        label="操作" min-width="20%" algin="left">
-                    <template slot-scope="scope">
-                        <el-button @click="handleDelete(scope.$index)" type="text" size="small">删除</el-button>
-                    </template>
-                </el-table-column>
-            </el-table>
-            <div style="width: 100%;margin-top: 15px" v-if="!isView">
-                <cli-upload v-on:notifyurl="urlget" v-bind:urltype="uploadType" style="margin-top: 0"></cli-upload>
-            </div>
-        </div>
+
 
     </div>
 </template>

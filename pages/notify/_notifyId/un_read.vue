@@ -16,8 +16,9 @@
                                     </th>
                                     <th style="min-width: 50px">序号</th>
                                     <th style="min-width: 90px">姓名</th>
-                                    <th style="min-width: 90px">邮箱</th>
+                                    <th style="min-width: 90px">学院</th>
                                     <th style="min-width: 90px">联系方式</th>
+                                    <th style="min-width: 90px">邮箱</th>
                                 </tr>
                                 <tr v-if="readlist.length > 0" v-for="(item,index) in readlist" :key="index + 'ro'" align="center" v-bind:class="{ 'gray-line': (index%2 === 1) }" >
                                     <td>
@@ -28,9 +29,9 @@
                                     <td>{{item.unitInfo.name}}</td>
                                     <td>{{item.phone}}</td>
                                     <td>{{item.email}}</td>
-                                    <td>{{item.entry_time}}年</td>
-                                    <td>{{item.positionInfo.name}}</td>
-                                    <td>{{item.jobtitleInfo.name}}</td>
+<!--                                    <td>{{item.entry_time}}年</td>-->
+<!--                                    <td>{{item.positionInfo.name}}</td>-->
+<!--                                    <td>{{item.jobtitleInfo.name}}</td>-->
                                 </tr>
 
                                 </tbody>
@@ -58,8 +59,9 @@
                                     </th>
                                     <th style="min-width: 50px">序号</th>
                                     <th style="min-width: 90px">姓名</th>
-                                    <th style="min-width: 90px">邮箱</th>
+                                    <th style="min-width: 90px">学院</th>
                                     <th style="min-width: 90px">联系方式</th>
+                                    <th style="min-width: 90px">邮箱</th>
                                 </tr>
                                 <tr v-if="unlist.length > 0" v-for="(item,index) in unlist" :key="index + 'ro'" align="center" v-bind:class="{ 'gray-line': (index%2 === 1) }" >
                                     <td>
@@ -70,9 +72,9 @@
                                     <td>{{item.unitInfo.name}}</td>
                                     <td>{{item.phone}}</td>
                                     <td>{{item.email}}</td>
-                                    <td>{{item.entry_time}}年</td>
-                                    <td>{{item.positionInfo.name}}</td>
-                                    <td>{{item.jobtitleInfo.name}}</td>
+<!--                                    <td>{{item.entry_time}}年</td>-->
+<!--                                    <td>{{item.positionInfo.name}}</td>-->
+<!--                                    <td>{{item.jobtitleInfo.name}}</td>-->
                                 </tr>
 
                                 </tbody>
@@ -92,7 +94,7 @@
 <!--                                    <el-row style="text-align: right">-->
                                         <!-- <el-button type="primary"  @click="exportlist" size="mini">名单导出</el-button>-->
                                         <el-button class="bottomButton" type="primary" size="mini" @click="notifyByEmail" v-loading.fullscreen.lock="fullscreenLoading">邮件提醒</el-button>
-                                        <el-button class="bottomButton" type="primary" size="mini" @click="notifyByMessage">短信提醒</el-button>
+<!--                                        <el-button class="bottomButton" type="primary" size="mini" @click="notifyByMessage">短信提醒</el-button>-->
                                         <notify_btn :is_message="0" :create_time="create_time" :name="name" class="bottomButton">生成消息提醒</notify_btn>
 <!--                                    </el-row>-->
                                 </div>

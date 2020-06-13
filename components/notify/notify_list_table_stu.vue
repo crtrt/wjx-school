@@ -23,7 +23,7 @@
                 <div class="tableTitle" v-if="type==='0'&&!inMain">
                 </div>
             </div>
-            <div :class="{'tablerow':true, 'grayLine': (index % 2 === 0)}" style="display: table-row;" v-if="item.title.split('/')[1] === accountinfo&&notifyList.length > 0" v-for="(item,index) in notifyList" :key="item.id">
+            <div :class="{'tablerow':true, 'grayLine': (index % 2 === 0)}" style="display: table-row;" v-if="notifyList.length > 0" v-for="(item,index) in notifyList" :key="item.id">
                 <div class="tableCell" style="text-align: center">
                     ·
                 </div>

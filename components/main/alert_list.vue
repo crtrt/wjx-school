@@ -31,10 +31,10 @@
                         {{index + 1}}
                     </div>
                     <strong  v-if="showType === 0"  class="tableCell">
-                        {{item.title}}
+                        {{item.title.split('/')[0]}}
                     </strong>
                     <strong  v-if="showType === 1"  class="tableCell">
-                        {{item.name}}
+                        {{item.name.split('/')[0]}}
                     </strong>
 
 

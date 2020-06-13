@@ -13,7 +13,7 @@
                     <el-tab-pane label="基本信息">
                         <notify_edit_disable :notitype="notifyType" ref="notifyCom"></notify_edit_disable>
                     </el-tab-pane>
-                    <el-tab-pane label="字段编辑">
+                    <el-tab-pane label="问卷编辑">
                         <data-edit :isView="readMessage" ref="zhengjiCom"></data-edit>
                     </el-tab-pane>
                 </el-tabs>
@@ -33,7 +33,6 @@
 
 
         </div>
-        <cli-footer style="position: absolute; bottom: 0;"></cli-footer>
     </div>
 </template>
 
@@ -59,7 +58,7 @@
             return {
                 messageId:-1,
                 position: {
-                    name: '问卷 >> ',
+                    name: '问卷 >> 问卷详情',
                     haveBack: true,
                 },
                 notifyType: 3,
@@ -100,7 +99,7 @@
                         return;
                     }
 
-                    this.position.name += res.survey_info.name;
+                    // this.position.name += res.survey_info.name;
                     this.$refs.notifyCom.setData(res.survey_info);
                     this.$refs.zhengjiCom.setData(res.survey_info.surveyQuestion);
 

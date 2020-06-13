@@ -13,14 +13,14 @@
             </el-card>
 
             <el-card style="margin-top: 20px;">
-                <div style="display: flex; margin-top: 20px; margin-left: 20px;">
-                    <p class="beizhu" style="color: #920000;">备注:</p>
-                    <p class="beizhu">
-                        <span v-if="review_status === 0" style="color: #920000">(尚未通过审核)</span>
-                        <span v-if="review_status === 1" style="color: #2ccd8d">(通过审核)</span>
-                        {{beizhu}}
-                    </p>
-                </div>
+<!--                <div style="display: flex; margin-top: 20px; margin-left: 20px;">-->
+<!--                    <p class="beizhu" style="color: #920000;">备注:</p>-->
+<!--                    <p class="beizhu">-->
+<!--                        <span v-if="review_status === 0" style="color: #920000">(尚未通过审核)</span>-->
+<!--                        <span v-if="review_status === 1" style="color: #2ccd8d">(通过审核)</span>-->
+<!--                        {{beizhu}}-->
+<!--                    </p>-->
+<!--                </div>-->
                 <Message_detail :isView="readMessage" ref="zhengjiCom"></Message_detail>
             </el-card>
 
@@ -31,7 +31,6 @@
 
 
         </div>
-        <cli-footer style="position: absolute; bottom: 0;"></cli-footer>
     </div>
 </template>
 
@@ -59,7 +58,7 @@
                 subTabIndex: 0,
 
                 position: {
-                    name: '问卷 >> ',
+                    name: '问卷 >> 问卷详情',
                     haveBack: true,
                 },
                 notifyType: 3,
@@ -90,7 +89,7 @@
                         alert(res.message);
                         return;
                     }
-                    this.position.name += res.answer_info.name;
+                    // this.position.name += res.answer_info.name;
                     this.beizhu = res.answer_info.beizhu && res.answer_info.beizhu !== '' ? res.answer_info.beizhu : '无';
                     this.$refs.notifyCom.setData(res.answer_info);
                     res.answer_info.surveyQuestion.forEach(item => {

@@ -26,24 +26,7 @@
 <!--        <el-button style="margin-top: 4rem" type="primary" @click="userLogin()" class="submitBtn" round v-loading.fullscreen.lock="loadingLogin">登陆</el-button>-->
 
       </el-tab-pane>
-      <el-tab-pane label="管理员登录">
-        <p class="title">
-          欢迎使用校园问卷星!
-        </p>
-        <el-form :model="loginForm" :rules="loginRule" ref="loginForm" :label-position="labelPosition">
 
-
-          <el-form-item  prop="userName" class="login-item" style="margin: 0">
-            <el-input type="userName" v-model="loginForm.userName" placeholder="账号" @keyup.enter.native="submitForm('loginForm')"></el-input>
-          </el-form-item>
-          <el-form-item prop="pwd" style="margin-top: 20px;margin-bottom: 0px">
-            <el-input v-model="loginForm.pwd" placeholder="密码" type="password" @keyup.enter.native="submitForm('loginForm')"></el-input>
-          </el-form-item>
-          <el-form-item style="margin-top: 20px">
-            <el-button type="primary" @click="submitForm('loginForm')" class="submitBtn" round >登录</el-button>
-          </el-form-item>
-        </el-form>
-      </el-tab-pane>
     </el-tabs>
 
     <div style="position: absolute; height: 2rem; bottom: 2rem">

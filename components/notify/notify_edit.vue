@@ -16,11 +16,11 @@
                 </div>
         </div>
 
-        <el-dialog title="发布范围" :visible.sync="dialogFormVisible" width="1000px" :modal="dialogModal">
+        <el-dialog title="发布范围" :visible.sync="dialogFormVisible" width="800px" :modal="dialogModal">
             <div>
                 <div style="width: 100%">
                     <el-radio-group v-model="rangeType" @change="selectChange" style="margin-left: 10px">
-<!--                        <el-radio :label="1" >单位</el-radio>-->
+                        <el-radio :label="1" >学院</el-radio>
 <!--                        <el-radio :label="2" >职称</el-radio>-->
                         <el-radio :label="3" >自定义</el-radio>
                     </el-radio-group>
@@ -61,17 +61,17 @@
                             </div>
                             <div class="tableTitle">
                                 <div class="dialog-table-self-cell">姓名</div>
-<!--                                <div class="dialog-table-self-cell">工号</div>-->
+                                <div class="dialog-table-self-cell">学号</div>
 <!--                                <div class="dialog-table-self-cell">单位</div>-->
                             </div>
                         </div>
                         <div class="tablerow" style="display: table-row;" v-if="list2.length > 0"
                              v-for="(item, index) in list2" :key="item.id">
-                            <div class="tableCell">
+                            <div v-show="item.job_number == undefined? 0 : item.job_number.length > 5" class="tableCell">
                                 <input type="checkbox" :key="index + 'list1'" :id="index+ 'list1'" :value="item.id"
                                        v-model="checkedids2" style="cursor:pointer">
                             </div>
-                            <div class="tableTitle">
+                            <div v-show="item.job_number == undefined? 0 : item.job_number.length > 5" class="tableTitle">
                                 <div class="dialog-table-self-cell">{{item.name}}</div>
                                 <div class="dialog-table-self-cell" style="">{{item.job_number}}</div>
 <!--                                <div class="dialog-table-self-cell" style="width: 180px;">{{item.unitInfo.name}}</div>-->
@@ -95,17 +95,17 @@
                         </div>
                         <div class="tableTitle">
                             <div class="dialog-table-self-cell">姓名</div>
-<!--                            <div class="dialog-table-self-cell">工号</div>-->
+                            <div class="dialog-table-self-cell">学号</div>
 <!--                            <div class="dialog-table-self-cell">单位</div>-->
                         </div>
                     </div>
                     <div class="tablerow" style="display: table-row;" v-if="list3.length > 0"
                          v-for="(item, index) in list3" :key="index+'list3'">
-                        <div class="tableCell">
+                        <div v-show="item.job_number == undefined? 0 : item.job_number.length > 5" class="tableCell">
                             <input type="checkbox" :key="index + 'list3'" :value="item.id" v-model="checkedids3"
                                    style="cursor:pointer">
                         </div>
-                        <div class="tableTitle">
+                        <div v-show="item.job_number == undefined? 0 : item.job_number.length > 5" class="tableTitle">
                             <div class="dialog-table-self-cell">{{item.name}}</div>
                             <div class="dialog-table-self-cell" style="">{{item.job_number}}</div>
 <!--                            <div class="dialog-table-self-cell" style="width: 180px;">{{item.unitInfo.name}}</div>-->
@@ -166,40 +166,40 @@
                 </div>
             </el-row>
         </div>
-        <div class="fujian display-row" style="margin-top: 80px;">
-            <div class="filelabel row-left"><p>附件:</p></div>
-            <div class="row-right">
-                <el-table
-                    :data="attachment"
-                    @row-click="clickrow"
-                    :row-style="{cursor:'pointer'}"
-                    style="width: 100%"
-                >
-                    <el-table-column
-                            v-if="attachment && attachment.length > 0"
-                            prop="filename"
-                            min-width="80%"
-                            label="附件（点击可下载）">
-                    </el-table-column>
-                    <el-table-column
-                            v-if="attachment && attachment.length === 0"
-                            prop="filename"
-                            min-width="80%"
-                            label="附件">
-                    </el-table-column>
-                    <el-table-column
-                            label="操作" min-width="20%" algin="left">
-                        <template slot-scope="scope">
-                            <el-button @click="handleDelete(scope.$index)" type="text" size="small">删除</el-button>
-                        </template>
-                    </el-table-column>
-                </el-table>
-                <div style="width: 100%;margin-top: 15px">
-                    <cli-upload v-on:notifyurl="urlget" v-bind:urltype="notify" style="margin-top: 0"></cli-upload>
-                </div>
-            </div>
+<!--        <div class="fujian display-row" style="margin-top: 80px;">-->
+<!--            <div class="filelabel row-left"><p>附件:</p></div>-->
+<!--            <div class="row-right">-->
+<!--                <el-table-->
+<!--                    :data="attachment"-->
+<!--                    @row-click="clickrow"-->
+<!--                    :row-style="{cursor:'pointer'}"-->
+<!--                    style="width: 100%"-->
+<!--                >-->
+<!--                    <el-table-column-->
+<!--                            v-if="attachment && attachment.length > 0"-->
+<!--                            prop="filename"-->
+<!--                            min-width="80%"-->
+<!--                            label="附件（点击可下载）">-->
+<!--                    </el-table-column>-->
+<!--                    <el-table-column-->
+<!--                            v-if="attachment && attachment.length === 0"-->
+<!--                            prop="filename"-->
+<!--                            min-width="80%"-->
+<!--                            label="附件">-->
+<!--                    </el-table-column>-->
+<!--                    <el-table-column-->
+<!--                            label="操作" min-width="20%" algin="left">-->
+<!--                        <template slot-scope="scope">-->
+<!--                            <el-button @click="handleDelete(scope.$index)" type="text" size="small">删除</el-button>-->
+<!--                        </template>-->
+<!--                    </el-table-column>-->
+<!--                </el-table>-->
+<!--                <div style="width: 100%;margin-top: 15px">-->
+<!--                    <cli-upload v-on:notifyurl="urlget" v-bind:urltype="notify" style="margin-top: 0"></cli-upload>-->
+<!--                </div>-->
+<!--            </div>-->
 
-        </div>
+<!--        </div>-->
 
         <div class="row-button" v-if="edittype !== 3">
             <el-button type="success" style="width: 100px;margin-right: 30px" v-if="edittype !== 3"  @click="submitInfo" >
@@ -265,6 +265,7 @@
 
         data() {
             return {
+                accountinfo: 0,
                 dialogModal: false,
                 isShowFaculty: false,
                 notifyRange: '',
@@ -325,6 +326,11 @@
             }
         },
         mounted: function () {
+            let ourinfo = Cookies.get('info')
+            let sndinfo = ourinfo.split(',')[1]
+            this.accountinfo = sndinfo.split(':')[1]
+
+            console.log(Cookies.get('accountID'))
 
             let data1 = {
                 token: this.token
@@ -374,7 +380,7 @@
                             alert(res.message);
                             return;
                         }
-                        this.notifytitle = res.title
+                        this.notifytitle = res.title.split('/')[0]
                         this.detailContent = res.content
                         this.attachment = res.attachment
                         res.range.forEach(item=>{
@@ -395,7 +401,7 @@
                             alert(res.message);
                             return;
                         }
-                        this.notifytitle = res.title
+                        this.notifytitle = res.title.split('/')[0]
                         this.detailContent = res.content
                         this.attachment = res.attachment
                         res.range.forEach(item=>{
@@ -438,7 +444,7 @@
                 })
                 this.notifyRange = this.notifyRange + '等人'
                 this.attachment = data.attachment;
-                this.notifytitle = data.name;
+                this.notifytitle = data.name.split('/')[0];
                 this.detailContent = data.requirement;
             },
 
@@ -796,7 +802,7 @@
                     let data = {
                         query_id:this.infoid,
                         token: this.token,
-                        title: this.notifytitle,
+                        title: this.notifytitle+'/'+this.accountinfo,
                         content: this.detailContent,
                         user_ids: range_ids,
                     }
@@ -820,7 +826,7 @@
                     let data = {
                         is_temporary: 0,
                         token: this.token,
-                        title: this.notifytitle,
+                        title: this.notifytitle+'/'+this.accountinfo,
                         content: this.detailContent,
                         attachment_urls: attachment_id,
                         user_ids: range_ids,
@@ -852,7 +858,7 @@
                 let data = {
                     is_temporary: 1,
                     token: this.token,
-                    title: this.notifytitle,
+                    title: this.notifytitle+'/'+this.accountinfo,
                     content: this.detailContent,
                     attachment_urls: attachment_id,
                     user_ids: range_ids
@@ -880,7 +886,7 @@
                     notify_id: notifyid,
                 }
                 API.notifyRead(data).then(res => {
-                    this.notifytitle = res.info.title;
+                    this.notifytitle = res.info.title.split('/')[0];
                     this.detailContent = res.info.content
                     this.attachment = res.info.attachment;
                     this.list3 = res.info.range
@@ -1035,7 +1041,7 @@
     }
 
     .row-button {
-        margin-top: 30px;
+        margin-top: 100px;
         display: -webkit-flex; /* Safari */
         -webkit-justify-content: flex-end; /* Safari 6.1+ */
         display: flex;

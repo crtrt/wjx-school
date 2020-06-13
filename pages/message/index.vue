@@ -5,15 +5,16 @@
 
         <div class="bodyDiv">
             <position :positionName="position.name"></position>
-            <list :pageIndex="pageIndex" :roleType="roleType" style="margin-top: 20px"></list>
+            <list v-show="roleType == 0" :pageIndex="pageIndex" :roleType="roleType" style="margin-top: 20px"></list>
+            <list-stu :pageIndex="pageIndex" v-show="roleType == 1" :roleType="roleType" style="margin-top: 20px"></list-stu>
         </div>
-        <cli-footer style="position: absolute; bottom: 0;"></cli-footer>
     </div>
 </template>
 
 <script>
     import Cookies from 'js-cookie'
     import List from "../../components/message/list";
+    import ListStu from "../../components/message/list_stu";
     import CliTitle from "../../components/base/cliTitle";
     import CliMenu from "../../components/base/cliMenu";
     import Position from "../../components/base/position";
@@ -23,7 +24,7 @@
     export default {
         name: "add",
         // components: {PaperEdit, Message_detail, DataEdit, Position, CliMenu, CliTitle,List},
-        components: {Message_detail, DataEdit, Position, CliMenu, CliTitle,List},
+        components: {Message_detail, DataEdit, Position, CliMenu, CliTitle,List,ListStu},
         data(){
             return{
                 pageIndex: "3",
