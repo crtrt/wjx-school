@@ -67,11 +67,11 @@
                         </div>
                         <div class="tablerow" style="display: table-row;" v-if="list2.length > 0"
                              v-for="(item, index) in list2" :key="item.id">
-                            <div v-if="item.job_number.length > 5" class="tableCell">
+                            <div v-show="item.job_number == undefined? 0 : item.job_number.length > 5" class="tableCell">
                                 <input type="checkbox" :key="index + 'list1'" :id="index+ 'list1'" :value="item.id"
                                        v-model="checkedids2" style="cursor:pointer">
                             </div>
-                            <div v-if="item.job_number.length > 5" class="tableTitle">
+                            <div v-show="item.job_number == undefined? 0 : item.job_number.length > 5" class="tableTitle">
                                 <div class="dialog-table-self-cell">{{item.name}}</div>
                                 <div class="dialog-table-self-cell" style="">{{item.job_number}}</div>
 <!--                                <div class="dialog-table-self-cell" style="width: 180px;">{{item.unitInfo.name}}</div>-->
@@ -101,11 +101,11 @@
                     </div>
                     <div class="tablerow" style="display: table-row;" v-if="list3.length > 0"
                          v-for="(item, index) in list3" :key="index+'list3'">
-                        <div v-if="item.job_number.length > 5"  class="tableCell">
+                        <div v-show="item.job_number == undefined? 0 : item.job_number.length > 5" class="tableCell">
                             <input type="checkbox" :key="index + 'list3'" :value="item.id" v-model="checkedids3"
                                    style="cursor:pointer">
                         </div>
-                        <div v-if="item.job_number.length > 5" class="tableTitle">
+                        <div v-show="item.job_number == undefined? 0 : item.job_number.length > 5" class="tableTitle">
                             <div class="dialog-table-self-cell">{{item.name}}</div>
                             <div class="dialog-table-self-cell" style="">{{item.job_number}}</div>
 <!--                            <div class="dialog-table-self-cell" style="width: 180px;">{{item.unitInfo.name}}</div>-->
@@ -401,7 +401,7 @@
                             alert(res.message);
                             return;
                         }
-                        this.notifytitle = res.title
+                        this.notifytitle = res.title.split('/')[0]
                         this.detailContent = res.content
                         this.attachment = res.attachment
                         res.range.forEach(item=>{
@@ -444,7 +444,7 @@
                 })
                 this.notifyRange = this.notifyRange + '等人'
                 this.attachment = data.attachment;
-                this.notifytitle = data.name;
+                this.notifytitle = data.name.split('/')[0];
                 this.detailContent = data.requirement;
             },
 
@@ -886,7 +886,7 @@
                     notify_id: notifyid,
                 }
                 API.notifyRead(data).then(res => {
-                    this.notifytitle = res.info.title;
+                    this.notifytitle = res.info.title.split('/')[0];
                     this.detailContent = res.info.content
                     this.attachment = res.info.attachment;
                     this.list3 = res.info.range

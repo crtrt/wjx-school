@@ -57,9 +57,9 @@
 <!--                        </div>-->
 
                         <div v-if="user_type !== '2'" style="margin-top: 15px; margin-left: 50px;" class="display-row">
-                            <div class="filelabel row-left" style="margin-top: 5px; width: 100px"><p>单位:</p></div>
+                            <div class="filelabel row-left" style="margin-top: 5px; width: 100px"><p>学院:</p></div>
                             <div class="titleinput row-right">
-                                <el-select placeholder="单位" v-model="user_info.unit_id" style="width: 275px">
+                                <el-select placeholder="学院" v-model="user_info.unit_id" style="width: 275px">
                                     <el-option v-for="item in unit_list" :key="item.id" :label="item.name" :value="item.id"></el-option>
                                 </el-select>
                             </div>
@@ -230,7 +230,21 @@
 
                 API.Changepw(data).then(res =>{
                     if(res.code){
-                        alert(res.message);
+                        // alert(res.message);
+                        if (res.message.password == undefined){
+                            if (res.message.asset_pw == undefined){
+                                if (res.message.again_pw == undefined){
+                                    alert(res.message);
+                                }else {
+                                    alert(res.message.again_pw[0]);
+                                }
+                            }else {
+                                alert(res.message.asset_pw[0]);
+                            }
+                        }else {
+                            alert(res.message.password[0]);
+                            console.log(res.message.password)
+                        }
                         return;
                     }
 
