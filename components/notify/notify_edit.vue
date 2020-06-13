@@ -61,17 +61,17 @@
                             </div>
                             <div class="tableTitle">
                                 <div class="dialog-table-self-cell">姓名</div>
-<!--                                <div class="dialog-table-self-cell">工号</div>-->
+                                <div class="dialog-table-self-cell">学号</div>
 <!--                                <div class="dialog-table-self-cell">单位</div>-->
                             </div>
                         </div>
                         <div class="tablerow" style="display: table-row;" v-if="list2.length > 0"
                              v-for="(item, index) in list2" :key="item.id">
-                            <div class="tableCell">
+                            <div v-if="item.job_number.length > 5" class="tableCell">
                                 <input type="checkbox" :key="index + 'list1'" :id="index+ 'list1'" :value="item.id"
                                        v-model="checkedids2" style="cursor:pointer">
                             </div>
-                            <div class="tableTitle">
+                            <div v-if="item.job_number.length > 5" class="tableTitle">
                                 <div class="dialog-table-self-cell">{{item.name}}</div>
                                 <div class="dialog-table-self-cell" style="">{{item.job_number}}</div>
 <!--                                <div class="dialog-table-self-cell" style="width: 180px;">{{item.unitInfo.name}}</div>-->
@@ -95,17 +95,17 @@
                         </div>
                         <div class="tableTitle">
                             <div class="dialog-table-self-cell">姓名</div>
-<!--                            <div class="dialog-table-self-cell">工号</div>-->
+                            <div class="dialog-table-self-cell">学号</div>
 <!--                            <div class="dialog-table-self-cell">单位</div>-->
                         </div>
                     </div>
                     <div class="tablerow" style="display: table-row;" v-if="list3.length > 0"
                          v-for="(item, index) in list3" :key="index+'list3'">
-                        <div class="tableCell">
+                        <div v-if="item.job_number.length > 5"  class="tableCell">
                             <input type="checkbox" :key="index + 'list3'" :value="item.id" v-model="checkedids3"
                                    style="cursor:pointer">
                         </div>
-                        <div class="tableTitle">
+                        <div v-if="item.job_number.length > 5" class="tableTitle">
                             <div class="dialog-table-self-cell">{{item.name}}</div>
                             <div class="dialog-table-self-cell" style="">{{item.job_number}}</div>
 <!--                            <div class="dialog-table-self-cell" style="width: 180px;">{{item.unitInfo.name}}</div>-->
