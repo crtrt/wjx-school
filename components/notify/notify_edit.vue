@@ -21,7 +21,6 @@
                 <div style="width: 100%">
                     <el-radio-group v-model="rangeType" @change="selectChange" style="margin-left: 10px">
                         <el-radio :label="1" >学院</el-radio>
-<!--                        <el-radio :label="2" >职称</el-radio>-->
                         <el-radio :label="3" >自定义</el-radio>
                     </el-radio-group>
                 </div>
@@ -46,12 +45,6 @@
                             </el-button>
                         </div>
 
-                        <!-- <el-radio-group class="tablerow" style="display: table-row;height: 20px" v-model="typeId" v-for="item in list1" :key="item.id" @change="getPersonList" size="mini">
-                            <el-radio :label="item.id">
-                                {{item.name}}
-                            </el-radio>
-                        </el-radio-group>
-                        -->
                     </div>
                     <div style="margin-top:10px;border: 1px solid #5EBBDA;width: 100%;height: 250px;overflow-y: auto;border-radius: 5px">
                         <div style="display: table-row">
@@ -62,7 +55,6 @@
                             <div class="tableTitle">
                                 <div class="dialog-table-self-cell">姓名</div>
                                 <div class="dialog-table-self-cell">学号</div>
-<!--                                <div class="dialog-table-self-cell">单位</div>-->
                             </div>
                         </div>
                         <div class="tablerow" style="display: table-row;" v-if="list2.length > 0"
@@ -74,7 +66,6 @@
                             <div v-show="item.job_number == undefined? 0 : item.job_number.length > 5" class="tableTitle">
                                 <div class="dialog-table-self-cell">{{item.name}}</div>
                                 <div class="dialog-table-self-cell" style="">{{item.job_number}}</div>
-<!--                                <div class="dialog-table-self-cell" style="width: 180px;">{{item.unitInfo.name}}</div>-->
                             </div>
                         </div>
                     </div>
@@ -96,7 +87,6 @@
                         <div class="tableTitle">
                             <div class="dialog-table-self-cell">姓名</div>
                             <div class="dialog-table-self-cell">学号</div>
-<!--                            <div class="dialog-table-self-cell">单位</div>-->
                         </div>
                     </div>
                     <div class="tablerow" style="display: table-row;" v-if="list3.length > 0"
@@ -108,7 +98,6 @@
                         <div v-show="item.job_number == undefined? 0 : item.job_number.length > 5" class="tableTitle">
                             <div class="dialog-table-self-cell">{{item.name}}</div>
                             <div class="dialog-table-self-cell" style="">{{item.job_number}}</div>
-<!--                            <div class="dialog-table-self-cell" style="width: 180px;">{{item.unitInfo.name}}</div>-->
                         </div>
                     </div>
                 </div>
@@ -166,40 +155,6 @@
                 </div>
             </el-row>
         </div>
-<!--        <div class="fujian display-row" style="margin-top: 80px;">-->
-<!--            <div class="filelabel row-left"><p>附件:</p></div>-->
-<!--            <div class="row-right">-->
-<!--                <el-table-->
-<!--                    :data="attachment"-->
-<!--                    @row-click="clickrow"-->
-<!--                    :row-style="{cursor:'pointer'}"-->
-<!--                    style="width: 100%"-->
-<!--                >-->
-<!--                    <el-table-column-->
-<!--                            v-if="attachment && attachment.length > 0"-->
-<!--                            prop="filename"-->
-<!--                            min-width="80%"-->
-<!--                            label="附件（点击可下载）">-->
-<!--                    </el-table-column>-->
-<!--                    <el-table-column-->
-<!--                            v-if="attachment && attachment.length === 0"-->
-<!--                            prop="filename"-->
-<!--                            min-width="80%"-->
-<!--                            label="附件">-->
-<!--                    </el-table-column>-->
-<!--                    <el-table-column-->
-<!--                            label="操作" min-width="20%" algin="left">-->
-<!--                        <template slot-scope="scope">-->
-<!--                            <el-button @click="handleDelete(scope.$index)" type="text" size="small">删除</el-button>-->
-<!--                        </template>-->
-<!--                    </el-table-column>-->
-<!--                </el-table>-->
-<!--                <div style="width: 100%;margin-top: 15px">-->
-<!--                    <cli-upload v-on:notifyurl="urlget" v-bind:urltype="notify" style="margin-top: 0"></cli-upload>-->
-<!--                </div>-->
-<!--            </div>-->
-
-<!--        </div>-->
 
         <div class="row-button" v-if="edittype !== 3">
             <el-button type="success" style="width: 100px;margin-right: 30px" v-if="edittype !== 3"  @click="submitInfo" >

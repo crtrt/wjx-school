@@ -37,7 +37,7 @@
                     {{item.update_time}}
                 </div>
                 <div class="tableCell" style="width: 60px" v-if="type==='0'&&!inMain">
-                    <el-button type="primary" size="mini" @click="editNotify(item)" v-show="item.type===1">编辑</el-button>
+                    <el-button type="primary" size="mini" @click="editnotify(item)" v-show="item.type===1">编辑</el-button>
                 </div>
                 <div class="tableCell" style="width: 60px" v-if="type==='0'&&!inMain">
                     <el-button type="primary" size="mini" @click="deleteNotifyList(item)">删除</el-button>
@@ -63,9 +63,6 @@
             <div style="padding-right: 15px" v-if="type==='0'">
                 <el-button type="primary" size="mini" @click="toNewNormalNotify">新建通知</el-button>
             </div>
-<!--            <div style="padding-right: 15px" v-if="type==='0'">-->
-<!--                <el-button type="primary" size="mini" @click="toNewSpecialNotify">新增个性通知</el-button>-->
-<!--            </div>-->
         </div>
 
     </el-card>
@@ -205,6 +202,8 @@
              * */
             editNotify(item){
                 this.$router.push({path: `/notify/`+item.query_id+`/edit`})
+            },
+            editnotify(item){
             },
             /**
              * 阅读
