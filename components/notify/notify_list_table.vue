@@ -63,9 +63,6 @@
             <div style="padding-right: 15px" v-if="type==='0'">
                 <el-button type="primary" size="mini" @click="toNewNormalNotify">新建通知</el-button>
             </div>
-<!--            <div style="padding-right: 15px" v-if="type==='0'">-->
-<!--                <el-button type="primary" size="mini" @click="toNewSpecialNotify">新增个性通知</el-button>-->
-<!--            </div>-->
         </div>
 
     </el-card>
