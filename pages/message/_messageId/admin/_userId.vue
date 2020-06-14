@@ -19,7 +19,7 @@
 
 
         </div>
-
+        <cli-footer style="position: absolute; bottom: 0;"></cli-footer>
     </div>
 </template>
 
@@ -30,10 +30,10 @@
     import Cli_sub_title from "../../../../components/base/cli_sub_title";
     import Message_detail from "../../../../components/message/message_detail";
     import Notify_edit_disable from "../../../../components/notify/notify_edit_disable";
-
+    import CliFooter from "../../../../components/base/cliFooter";
     export default {
         name: "user_detail",
-        components: {Notify_edit_disable, Message_detail, Cli_sub_title, Position, CliMenu, CliTitle},
+        components: {Notify_edit_disable, Message_detail, Cli_sub_title, Position, CliMenu, CliTitle,CliFooter},
         data(){
             return{
                 messageId:-1,
