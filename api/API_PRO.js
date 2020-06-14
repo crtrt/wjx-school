@@ -11,7 +11,7 @@ export default {
     /**
      * 基本信息
      */
-    getUnitList: {url: 'common/setting/get-unit'}, //获得单位
+    getUnitList: {url: 'common/setting/get-unit'}, 
     getPositionList: {url: 'common/setting/get-position'},
     getJobList: {url: 'common/setting/get-jobtitle'},
 
